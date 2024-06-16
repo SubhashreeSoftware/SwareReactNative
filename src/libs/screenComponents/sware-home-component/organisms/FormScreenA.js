@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import TextInputExample from '../../../inputA';
-import SelectField from '../../../SelectFieldA';
-import TextareaExample from '../../../TextAreaA';
-import SimpleButton from '../../../ButtonA';
+import TextInputExample from '../../../atoms/inputA';
+import SelectField from '../../../atoms/SelectFieldA';
+import TextareaExample from '../../../atoms/TextAreaA';
+import SimpleButton from '../../../atoms/ButtonA';
 
-const HomeScreen = () => {
+const FormScreenA = () => {
   const [selectedValue, setSelectedValue] = useState('option1');
 
   const handleSelect = (value) => {
@@ -60,4 +60,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default FormScreenA;
