@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, View, StyleSheet } from 'react-native';
 
-const ButtonCom = () => {
+const ButtonJ = () => {
   return (
     <View style={styles.container}>
       <Button
@@ -23,4 +23,4 @@ const styles = StyleSheet.create({
 
   },
 });
-export default ButtonCom; 
+export default ButtonJ; 

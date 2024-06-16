@@ -5,7 +5,7 @@ import RNPickerSelect from 'react-native-picker-select';
 import React, { useState } from 'react';
 
 
-const Dropdown = () => {
+const DropdownJ = () => {
   const [value, setValue] = useState(0);
   const [selectedValue, setSelectedValue] = useState('');
 
@@ -26,8 +26,8 @@ const Dropdown = () => {
             onPress={(value) => setValue(value)}
             buttonSize={10}
             buttonOuterSize={20}
-            buttonColor='black'
-            labelColor='black'
+            buttonColor='white'
+            labelColor='white'
 
 
           />
@@ -58,9 +58,10 @@ const styles = StyleSheet.create({
   },
   label:{
      marginRight: 100,
-     marginTop : 20
+     marginTop : 20,
+     color:'white',
   },
   
 });
 
-export default Dropdown;
+export default DropdownJ;

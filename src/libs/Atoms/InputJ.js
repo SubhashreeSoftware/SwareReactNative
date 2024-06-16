@@ -1,7 +1,7 @@
 import { View, TextInput, Button, StyleSheet, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-const Input = () => {
+const InputJ = () => {
   
   return (
     <View>
@@ -77,4 +77,4 @@ const styles = StyleSheet.create({
   
 });
 
-export default Input;
+export default InputJ;

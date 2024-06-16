@@ -1,20 +1,19 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import ButtonCom from '../../../Atoms/ButtonCom';
-import Input from '../../../Atoms/Input';
-import Dropdown from '../../../Atoms/Dropdown';
-
+import { View, StyleSheet } from 'react-native';
+import ButtonJ from '../../../Atoms/ButtonJ';
+import InputJ from '../../../Atoms/InputJ';
+import DropdownJ from '../../../Atoms/DropdownJ';
+import ImageComJ from '../../../Atoms/ImageComJ';
 const HomeScreen = () => {
     return (
         <View style={styles.container}>
-            
-                <Text style={styles.text}>React native Form</Text>
-                <View style={styles.box}>
-                <Input />                
-                <Dropdown/>
-                <ButtonCom />
-                </View>
-           
+            <ImageComJ />
+            <View style={styles.box}>
+                <InputJ />
+                <DropdownJ />
+                <ButtonJ />
+            </View>
+
         </View>
     );
 };
@@ -31,9 +30,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderWidth: 0,
         borderRadius: 10,
-        backgroundColor: '#fdf5e6',
-        marginBottom: 100,
-        marginTop:30,
+        elevation: 5,  
+        marginBottom: 50,
         paddingHorizontal: 20,
 
     },
