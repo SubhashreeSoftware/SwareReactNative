@@ -1,10 +1,10 @@
 import React, { useState }  from 'react';
-import {SafeAreaView, StyleSheet, TextInput} from 'react-native';
+import { StyleSheet, TextInput, View} from 'react-native';
 
 const TextInputExample = () => {
   const [email, setEmail] = useState('');
   return (
-    <SafeAreaView>
+    <View>
       <TextInput
         style={styles.input}
         onChangeText={setEmail}
@@ -13,7 +13,7 @@ const TextInputExample = () => {
         keyboardType='email-address'
         autoCapitalize='none'
       />
-    </SafeAreaView>
+    </View>
   );
 };
 

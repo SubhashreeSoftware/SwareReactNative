@@ -1,14 +1,23 @@
-import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
-export class DrawerMenu extends Component {
-  render() {
-    return (
-      <View>
-        <Text> textInComponent </Text>
-      </View>
-    )
-  }
-}
+const DrawerMenu = () => {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.text}>Drawer Menu</Text>
+    </View>
+  );
+};
 
-export default DrawerMenu
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: 24,
+  },
+});
+
+export default DrawerMenu;

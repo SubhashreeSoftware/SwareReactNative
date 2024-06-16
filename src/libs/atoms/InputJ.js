@@ -1,10 +1,10 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export default function ProfileScreen() {
+export default function InputJ() {
   return (
     <View>
-      <Text>ProfileScreen</Text>
+      <Text>InputJ</Text>
     </View>
   )
 }
