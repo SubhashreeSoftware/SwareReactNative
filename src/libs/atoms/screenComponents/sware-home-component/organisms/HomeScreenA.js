@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import TextInputExample from '../../../input';
-import SelectField from '../../../SelectField';
-import TextareaExample from '../../../TextArea';
-import SimpleButton from '../../../Button';
+import TextInputExample from '../../../inputA';
+import SelectField from '../../../SelectFieldA';
+import TextareaExample from '../../../TextAreaA';
+import SimpleButton from '../../../ButtonA';
 
 const HomeScreen = () => {
   const [selectedValue, setSelectedValue] = useState('option1');
