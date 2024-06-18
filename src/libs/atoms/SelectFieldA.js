@@ -1,53 +1,31 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { RadioButton } from 'react-native-paper';
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-around',
-    borderRadius: 8,
-    backgroundColor: 'white',
-    padding: 16,
-    shadowColor: '#000',
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-  },
-  radioButton: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  radioLabel: {
-    marginLeft: 8,
-    fontSize: 16,
-    color: '#333',
-  },
-});
-
-const SelectField = ({ options, defaultValue, onSelect }) => {
-  const [selectedValue, setSelectedValue] = useState(defaultValue);
-
-  const handleSelect = (value) => {
-    setSelectedValue(value);
-    onSelect(value); 
-  };
+import CheckBox from 'react-native-check-box';
+const CheckboxJ = () => {
+  const [isChecked, setIsChecked] = useState(false);
 
   return (
-    <View style={styles.container}>
-      {options.map((option) => (
-        <View key={option.value} style={styles.radioButton}>
-          <RadioButton.Android
-            value={option.value}
-            status={selectedValue === option.value ? 'checked' : 'unchecked'}
-            onPress={() => handleSelect(option.value)}
-            color="#007BFF"
-          />
-          <Text style={styles.radioLabel}>{option.label}</Text>
-        </View>
-      ))}
+    <View style={{ padding: 30 }}>
+      <Text style={{ fontSize: 22, fontWeight: 'bold', color: 'black', marginBottom: 20 }}>
+        Select your Hobby
+      </Text>
+
+      <CheckBox
+        isChecked={isChecked}
+        onClick={() => setIsChecked(isChecked)} rightText='' />
     </View>
   );
 };
 
-export default SelectField;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  checkbox: {
+    alignSelf: 'center',
+  },
+});
+
+export default CheckboxJ;
