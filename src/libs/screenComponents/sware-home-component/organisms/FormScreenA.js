@@ -4,9 +4,19 @@ import TextInputExample from '../../../atoms/inputA';
 import SelectField from '../../../atoms/SelectFieldA';
 import TextareaExample from '../../../atoms/TextAreaA';
 import SimpleButton from '../../../atoms/ButtonA';
+import PasswordInput from '../../../atoms/PasswordInputA';
+import DropdownA from '../../../atoms/DropdownA';
+import ImageUploadA from '../../../atoms/ImageUploadA';
+import CheckboxA from '../../../atoms/CheckboxA';
+import FileUploadA from '../../../atoms/FileUploadA';
 
 const FormScreenA = () => {
   const [selectedValue, setSelectedValue] = useState('option1');
+  const [isChecked, setIsChecked] = useState(false); // Ensure isChecked state is defined
+
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+  };
 
   const handleSelect = (value) => {
     setSelectedValue(value);
@@ -17,12 +27,21 @@ const FormScreenA = () => {
       <Text style={styles.screenText}>Form Page</Text>
       <View style={styles.formContainer}>
         <TextInputExample />
+        <PasswordInput />
         <SelectField 
           options={dropdownOptions} 
           defaultValue={selectedValue} 
           onSelect={handleSelect} 
         />
+        <DropdownA />
+        <FileUploadA />
+        <ImageUploadA />
         <TextareaExample />
+        <CheckboxA
+          label="Check me"
+          checked={isChecked}
+          onChange={handleCheckboxChange}
+        />
         <SimpleButton />
       </View>
     </ScrollView>
