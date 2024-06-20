@@ -1,11 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet, FlatList } from 'react-native';
+import { View, Text, StyleSheet, FlatList, ScrollView } from 'react-native';
 import FormScreenA from './FormScreenA';
 import FormScreenJ from './FormScreenJ';
 import CardScreenA from './CardScreenA';
 import CamCardA from './CamCardA';
 import PropertiesA from './PropertiesA';
 import FlatListA from './FlatListA';
+import CardscreenJ from './CardscreenJ';
 
 const HomeScreen = () => {
   const data = [
@@ -26,12 +27,19 @@ const HomeScreen = () => {
   );
 
   return (
+    <ScrollView contentContainerStyle={styles.scrollContainer}>
+    <FormScreenA />
+    <CardScreenA />
+    <CamCardA />
+    <FormScreenJ />
+    <CardscreenJ/>
     <FlatList
       data={data}
       renderItem={renderItem}
       keyExtractor={item => item.id}
       contentContainerStyle={styles.container}
     />
+    </ScrollView>
   );
 };
 

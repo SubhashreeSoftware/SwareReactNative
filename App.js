@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import HomeScreen from './src/libs/screenComponents/sware-home-component/organisms/HomeScreen';
 import Router from './src/apps/routerHub/Router';
 
