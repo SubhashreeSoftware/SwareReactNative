@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import FormScreenA from './FormScreenA';
 import FormScreenJ from './FormScreenJ';
 import CardscreenJ from './CardscreenJ';
+import FlatlistJ from './FlatlistJ';
 
 const HomeScreen = () => {
 
@@ -11,6 +12,7 @@ const HomeScreen = () => {
     <FormScreenA />
     <FormScreenJ />
     <CardscreenJ/>
+    <FlatlistJ/>
     </ScrollView>
   );
 };
