@@ -10,19 +10,17 @@ const CardscreenJ = () => {
                     source={require('../../../../../assets/speaker.png')}
                     style={styles.localImage}
                 />
-                <View style={{ justifyContent: "flex-start", alignItems: "flex-start" }}>
-                    <Text style={styles.portable}>#Portable FM</Text>
-                    <Text style={styles.divoom}>Divoom Radio</Text>
-                    <View style={styles.row}>
-                        <Image
-                            source={require('../../../../../assets/dollar.png')}
-                            style={styles.dollar}
-                        />
-                        <Text style={styles.text}>$52.00</Text>
-                    </View>
+                <View style= {{justifyContent: "flex-start", alignItems: "flex-start"}}>
+                <Text style={styles.portable}>#Portable FM</Text>
+                <Text style={styles.divoom}>Divoom Radio</Text>
+                <View style={styles.row}>
+                    <Image
+                        source={require('../../../../../assets/dollar.png')}
+                        style={styles.dollar}
+                    />
+                    <Text style={styles.text}>$52.00</Text>
                 </View>
-
-
+                </View>
             </View>
         </View>
     );
@@ -56,7 +54,6 @@ const styles = StyleSheet.create({
     portable: {
         color: '#a9a9a9',
         fontSize: 20,
-        // marginRight: 70,
         marginTop: 30,
     },
     divoom: {
@@ -68,20 +65,18 @@ const styles = StyleSheet.create({
     dollar: {
         height: 27,
         width: 27,
-        marginTop: 17,
-        // marginRight: 15 ,
-
+       marginTop: 16,
+        
     },
     row: {
         flexDirection: 'row',
     },
     text: {
-
         marginTop: 13,
-        // marginRight: 65,
         fontWeight: 'bold',
         fontSize: 25,
         color: 'black',
+        paddingLeft: 10,
     },
 });
 export default CardscreenJ;

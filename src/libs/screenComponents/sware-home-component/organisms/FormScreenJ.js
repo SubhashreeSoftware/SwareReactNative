@@ -10,7 +10,15 @@ const HomeScreen = () => {
     return (
         <View style={styles.container}>
                 <View style={styles.boxInput}>
-                <InputJ />
+                <InputJ
+                iconName = "fax"
+                inputText = "CARD NUMBER" />
+                <InputJ
+                iconName = "person"
+                inputText = "CARDHOLDER'S NAME" />
+                <InputJ
+                iconName = "call"
+                inputText = "CONTACT NO" />
                 <PasswordJ/>
                 <DropdownJ />
                 <CheckboxJ/>

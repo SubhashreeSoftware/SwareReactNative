@@ -1,38 +1,21 @@
 import { View, TextInput, StyleSheet, } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-const InputJ = () => {
+const InputJ = ({inputText, iconName}) => {
   
   return (
     <View>
       <View style={styles.box}>
         <View style={styles.inputContainer}>
-        <Icon name="fax" size={20} color="#e5e4e2" style={styles.icon} />
+        <Icon name={iconName} size={20} color="#e5e4e2" style={styles.icon} />
           <TextInput
             style={styles.input}
-            placeholder="CARD NUMBER"
+            placeholder={inputText}
             placeholderTextColor="#e5e4e2" 
             keyboardType="name"
           />
         </View>
-        <View style={styles.inputContainer}>
-        <Icon name="person" size={20} color="#e5e4e2" style={styles.icon} />
-          <TextInput
-            style={styles.input}
-            placeholder="CARDHOLDER'S NAME"
-            placeholderTextColor="#e5e4e2" 
-            keyboardType="email-address"
-          />
-        </View>
-        <View style={styles.inputContainer}>
-        <Icon name="call" size={20} color="#e5e4e2" style={styles.icon} />
-          <TextInput
-            style={styles.input}
-            placeholder="CONTACT NUMBER"
-            placeholderTextColor="#e5e4e2" 
-            keyboardType="number"
-          />
-        </View>
+        
         </View>
     </View>
   );
