@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import FormScreenA from './FormScreenA';
 import FormScreenJ from './FormScreenJ';
@@ -7,15 +7,17 @@ import CamCardA from './CamCardA';
 import CardscreenJ from './CardscreenJ';
 
 const HomeScreen = () => {
-
   return (
-    <ScrollView contentContainerStyle={styles.scrollContainer}>
-    <FormScreenA />
-    <CardScreenA />
-    <CamCardA />
-    <FormScreenJ />
-    <CardscreenJ/>
+    <View style={styles.scrollContainer}>
+<ScrollView>
+      {/* <FormScreenA />
+      <CardScreenA />
+      <CamCardA />
+      <FormScreenJ />
+      <CardscreenJ /> */}
     </ScrollView>
+    </View>
+    
   );
 };
 
@@ -26,7 +28,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 16,
   },
- 
 });
 
 export default HomeScreen;

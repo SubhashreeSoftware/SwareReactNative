@@ -1,23 +1,13 @@
+import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import HomeScreen from './src/libs/screenComponents/sware-home-component/organisms/HomeScreen';
-import Router from './src/apps/routerHub/Router';
+import RouterHub from './src/apps/RouterHub/RouterHub';
+import 'react-native-gesture-handler';
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <>
       <StatusBar style="auto" />
-      <HomeScreen/>
-      {/* <Router /> */}
-    </View>
+      <RouterHub />
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
