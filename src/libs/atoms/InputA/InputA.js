@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, TextInput, View, Text } from 'react-native';
 import InputAstyles from './InputA.styles';
 
-const TextInputExample = ({inputtext}) => {
+const InputA = ({inputtext}) => {
   const [email, setEmail] = useState('');
 
   return (
@@ -21,4 +21,4 @@ const TextInputExample = ({inputtext}) => {
 };
 
 
-export default TextInputExample;
+export default InputA;

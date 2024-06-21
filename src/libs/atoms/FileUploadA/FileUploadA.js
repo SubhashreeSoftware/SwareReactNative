@@ -4,7 +4,7 @@ import { launchImageLibrary } from 'react-native-image-picker';
 import axios from 'axios';
 import FileUploadAstyles from './FileUploadA.styles';
 
-const FileUpload = () => {
+const FileUploadA = () => {
   const [fileUri, setFileUri] = useState(null);
 
   const selectFile = async () => {
@@ -74,4 +74,4 @@ const FileUpload = () => {
 };
 
 
-export default FileUpload;
+export default FileUploadA;

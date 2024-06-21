@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, TextInput, StyleSheet } from 'react-native';
 import TextAreaAstyles from './TextAreaA.styles';
 
-const TextareaExample = () => {
+const TextAreaA = () => {
   const [text, setText] = useState('');
 
   return (
@@ -20,4 +20,4 @@ const TextareaExample = () => {
 };
 
 
-export default TextareaExample;
+export default TextAreaA;

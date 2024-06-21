@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import TextInputExample from '../../../../atoms/InputA/InputA';
-import TextareaExample from '../../../../atoms/TextAreaA/TextAreaA';
+import InputA from '../../../../atoms/InputA/InputA';
+import TextAreaA from '../../../../atoms/TextAreaA/TextAreaA';
 import SimpleButton from '../../../../atoms/ButtonA/ButtonA';
 import PasswordInputA from '../../../../atoms/PasswordInputA/PasswordInputA';
 import DropdownA from '../../../../atoms/DropdownA/DropdownA';
 import ImageUploadA from '../../../../atoms/ImageUploadA/ImageUploadA';
 import CheckboxA from '../../../../atoms/CheckboxA/CheckboxA';
-import FileUpload from '../../../../atoms/FileUploadA/FileUploadA';
+import FileUploadA from '../../../../atoms/FileUploadA/FileUploadA';
 import SelectFieldA from '../../../../atoms/SelectFieldA/SelectFieldA';
 import FormScreenAstyles from './FormScreenA.styles';
 
@@ -27,7 +27,7 @@ const FormScreenA = () => {
     <ScrollView contentContainerStyle={FormScreenAstyles.scrollContainer}>
       <Text style={FormScreenAstyles.screenText}>Form Page</Text>
       <View style={FormScreenAstyles.formContainer}>
-        <TextInputExample />
+        <InputA />
         <PasswordInputA />
         <SelectFieldA 
           options={dropdownOptions} 
@@ -35,9 +35,9 @@ const FormScreenA = () => {
           onSelect={handleSelect} 
         />
         <DropdownA />
-        <FileUpload />
+        <FileUploadA />
         <ImageUploadA />
-        <TextareaExample />
+        <TextAreaA />
         <CheckboxA
           label="Check me"
           checked={isChecked}
