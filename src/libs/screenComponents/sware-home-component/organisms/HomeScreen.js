@@ -1,13 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet, FlatList, ScrollView } from 'react-native';
 import FormScreenA from './FormScreenA';
-import FormScreenJ from './FormScreenJ';
+import FormScreenJ from './FormScreenJ/FormScreenJ';
 import CardScreenA from './CardScreenA';
 import CamCardA from './CamCardA';
 import PropertiesA from './PropertiesA';
 import FlatListA from './FlatListA';
-import CardscreenJ from './CardscreenJ';
-import FlatlistJ from './FlatlistJ';
+import CardscreenJ from './CardScreenJ/CardscreenJ';
+import FlatlistJ from './FlatlistJ/FlatlistJ';
 
 const HomeScreen = () => {
   const data = [
