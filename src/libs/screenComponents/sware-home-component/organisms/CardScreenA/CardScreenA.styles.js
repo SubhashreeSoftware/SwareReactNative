@@ -1,6 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { Color, Padding } from "../../../../GlobalStyles";
-import CssA from '../CommonCss/CSSA';
+import CssA from '../../../../atoms/CommonCss/CSSA';
 
 const CardScreenAstyles = StyleSheet.create({
     container: {

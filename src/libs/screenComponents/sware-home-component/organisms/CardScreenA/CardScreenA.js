@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
-import CheckBoxA from '../../../atoms/CheckboxA/CheckboxA';
+import CheckboxA from '../../../../atoms/CheckboxA/CheckboxA';
 import CardScreenAstyles from './CardScreenA.styles';
 
 const CardScreenA = () => {
@@ -75,7 +75,7 @@ const CardScreenA = () => {
         />
       </View>
 
-      <CheckBoxA
+      <CheckboxA
         label="Save credit card information"
         checked={saveCardInfo}
         onChange={() => setSaveCardInfo(!saveCardInfo)}

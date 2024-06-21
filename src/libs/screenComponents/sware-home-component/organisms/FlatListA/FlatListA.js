@@ -9,7 +9,7 @@ const transactions = [
     description: 'Subscription Payment',
     amount: '$15,00',
     date: '16 May 2024',
-    icon: require('../../../../../assets/youtube.png'),
+    icon: require('../../../../../../assets/youtube.png'),
   },
   {
     id: '2',
@@ -17,7 +17,7 @@ const transactions = [
     description: 'Monthly Salary',
     amount: '+ $3,000',
     date: '15 May 2024',
-    icon: require('../../../../../assets/stripe.png'),
+    icon: require('../../../../../../assets/stripe.png'),
   },
   {
     id: '3',
@@ -25,7 +25,7 @@ const transactions = [
     description: 'E-book Purchase',
     amount: '$139,00',
     date: '14 May 2024',
-    icon: require('../../../../../assets/googleplay.png'),
+    icon: require('../../../../../../assets/googleplay.png'),
   },
   {
     id: '4',
@@ -33,7 +33,7 @@ const transactions = [
     description: 'Top Up E-Money',
     amount: '$180,00',
     date: '18 May 2024',
-    icon: require('../../../../../assets/ovo.jpg'),
+    icon: require('../../../../../../assets/ovo.jpg'),
   },
 ];
 
