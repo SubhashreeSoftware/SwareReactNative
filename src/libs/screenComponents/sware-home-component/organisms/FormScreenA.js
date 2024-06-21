@@ -3,12 +3,12 @@ import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import TextInputExample from '../../../atoms/inputA';
 import SelectField from '../../../atoms/SelectFieldA';
 import TextareaExample from '../../../atoms/TextAreaA';
-import SimpleButton from '../../../atoms/ButtonA';
-import PasswordInput from '../../../atoms/PasswordInputA';
+import PasswordInput from '../../../atoms/PasswordInputA/PasswordInputA';
 import DropdownA from '../../../atoms/DropdownA';
 import ImageUploadA from '../../../atoms/ImageUploadA';
 import CheckboxA from '../../../atoms/CheckboxA';
 import FileUploadA from '../../../atoms/FileUploadA';
+import SimpleButton from '../../../atoms/ButtonA/ButtonA';
 
 const FormScreenA = () => {
   const [selectedValue, setSelectedValue] = useState('option1');

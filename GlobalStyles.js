@@ -28,6 +28,7 @@ export const FontSize = {
 };
 /* Colors */
 export const Color = {
+  primarycolor: "#2a6dfc",
   lightyellow: "#fdd10059",
   yellow: "#ffcd4e",
   yellow100: "#AA8100",

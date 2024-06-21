@@ -6,6 +6,8 @@ import ImageComJ from '../../../atoms/ImageComJ'
 import InputJ from '../../../atoms/InputJ';
 import CheckboxJ from '../../../atoms/CheckboxJ';
 import PasswordJ from '../../../atoms/PasswordJ';
+import { Border, Color } from "../../../../../GlobalStyles"
+
 const HomeScreen = () => {
     return (
         <View style={styles.container}>
@@ -40,11 +42,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         borderWidth: 0,
-        borderRadius: 20,
+        borderRadius: Border.br_xl,
         elevation: 5,  
         paddingHorizontal: 20,
         marginTop: 10,
-        backgroundColor: 'white',
+        backgroundColor: Color.white,
 
     },
     text: {

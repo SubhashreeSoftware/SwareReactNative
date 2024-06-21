@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { SafeAreaView, StyleSheet, TextInput, View, Text, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import PasswordInputAstyles from './PasswordInputA.styles';
+import CssA from '../CommonCss/CssA';
+import TextInputExample from '../inputA';
 
 const PasswordInput = () => {
   const [password, setPassword] = useState('');
@@ -11,16 +14,19 @@ const PasswordInput = () => {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.inputContainer}>
-        <Text style={styles.label}>Password:</Text>
-        <View style={styles.passwordContainer}>
+    <SafeAreaView style={CssA.container}>
+      <View style={PasswordInputAstyles.inputContainer}>
+        <Text style={PasswordInputAstyles.label}>Password:</Text>
+        <View style={PasswordInputAstyles.passwordContainer}>
           <TextInput
-            style={styles.input}
+            style={PasswordInputAstyles.input}
             placeholder="Enter your password"
             secureTextEntry={!isPasswordVisible}
             value={password}
             onChangeText={setPassword}
+          />
+          <TextInputExample
+          inputtext="Enter your password"
           />
           <TouchableOpacity onPress={togglePasswordVisibility}>
             <Icon
@@ -34,32 +40,5 @@ const PasswordInput = () => {
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    padding: 16,
-  },
-  inputContainer: {
-    marginBottom: 20,
-  },
-  label: {
-    marginBottom: 8,
-    fontSize: 16,
-  },
-  passwordContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    borderColor: 'gray',
-    borderWidth: 1,
-    borderRadius: 4,
-  },
-  input: {
-    flex: 1,
-    height: 40,
-    paddingHorizontal: 8,
-  },
-});
 
 export default PasswordInput;

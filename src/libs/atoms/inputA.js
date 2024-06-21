@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, TextInput, View, Text } from 'react-native';
 
-const TextInputExample = () => {
+const TextInputExample = ({inputtext}) => {
   const [email, setEmail] = useState('');
 
   return (
@@ -11,7 +11,7 @@ const TextInputExample = () => {
         style={styles.input}
         onChangeText={setEmail}
         value={email}
-        placeholder="Enter your email"
+        placeholder={inputtext}
         keyboardType="email-address"
         autoCapitalize="none"
       />
