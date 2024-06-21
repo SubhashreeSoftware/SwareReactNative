@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { View, Button, Image, Text, StyleSheet } from 'react-native';
 import { launchImageLibrary } from 'react-native-image-picker';
 import axios from 'axios';
+import FileUploadJstyles from './FileUploadJ.styles';
+import CssJ from '../CommonCss/CssJ';
 
 const FileUploadJ = () => {
   const [fileUri, setFileUri] = useState(null);
@@ -43,11 +45,11 @@ const FileUploadJ = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={CssJ.container}>
       <Button title="Select Resume" onPress={selectFile} />
       {fileUri && (
         <>
-          <Image source={{ uri: fileUri }} style={styles.image} />
+          <Image source={{ uri: fileUri }} style={FileUploadJstyles.image} />
           <Button title="Upload File" onPress={uploadFile} />
         </>
       )}
@@ -56,18 +58,5 @@ const FileUploadJ = () => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  image: {
-    width: 200,
-    height: 200,
-    marginTop: 20,
-    marginBottom: 20,
-  },
-});
 
 export default FileUploadJ;
