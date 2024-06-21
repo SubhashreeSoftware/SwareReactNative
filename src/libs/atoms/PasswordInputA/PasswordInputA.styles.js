@@ -1,7 +1,11 @@
 import { StyleSheet } from 'react-native';
 import { Color, Padding } from "../../../../GlobalStyles";
+import CssA from '../CommonCss/CSSA';
 
 const PasswordInputAstyles = StyleSheet.create({
+    container: {
+        ...CssA.container
+      },
       inputContainer: {
         marginBottom: 20,
       },

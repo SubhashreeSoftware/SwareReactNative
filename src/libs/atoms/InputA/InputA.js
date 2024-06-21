@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { StyleSheet, TextInput, View, Text } from 'react-native';
+import InputAstyles from './InputA.styles';
 
 const TextInputExample = ({inputtext}) => {
   const [email, setEmail] = useState('');
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.label}>Email:</Text>
+    <View style={InputAstyles.container}>
+      <Text style={InputAstyles.label}>Email:</Text>
       <TextInput
-        style={styles.input}
+        style={InputAstyles.input}
         onChangeText={setEmail}
         value={email}
         placeholder={inputtext}
@@ -19,19 +20,5 @@ const TextInputExample = ({inputtext}) => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    margin: 12,
-  },
-  label: {
-    fontSize: 16,
-    marginBottom: 8,
-  },
-  input: {
-    height: 40,
-    borderWidth: 1,
-    padding: 10,
-  },
-});
 
 export default TextInputExample;

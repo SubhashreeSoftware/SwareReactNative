@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import TextInputExample from '../../../atoms/inputA';
-import SelectField from '../../../atoms/SelectFieldA';
-import TextareaExample from '../../../atoms/TextAreaA';
-import PasswordInput from '../../../atoms/PasswordInputA/PasswordInputA';
-import DropdownA from '../../../atoms/DropdownA';
-import ImageUploadA from '../../../atoms/ImageUploadA';
-import CheckboxA from '../../../atoms/CheckboxA';
-import FileUploadA from '../../../atoms/FileUploadA';
+import TextInputExample from '../../../atoms/InputA/InputA';
+import TextareaExample from '../../../atoms/TextAreaA/TextAreaA';
 import SimpleButton from '../../../atoms/ButtonA/ButtonA';
+import PasswordInput from '../../../atoms/PasswordInputA/PasswordInputA';
+import DropdownA from '../../../atoms/DropdownA/DropdownA';
+import ImageUploadA from '../../../atoms/ImageUploadA/ImageUploadA';
+import CheckboxA from '../../../atoms/CheckboxA/CheckboxA';
+import FileUploadA from '../../../atoms/FileUploadA/FileUploadA';
+import SelectFieldA from '../../../atoms/SelectFieldA/SelectFieldA';
 
 const FormScreenA = () => {
   const [selectedValue, setSelectedValue] = useState('option1');
-  const [isChecked, setIsChecked] = useState(false); // Ensure isChecked state is defined
+  const [isChecked, setIsChecked] = useState(false); 
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
@@ -28,7 +28,7 @@ const FormScreenA = () => {
       <View style={styles.formContainer}>
         <TextInputExample />
         <PasswordInput />
-        <SelectField 
+        <SelectFieldA 
           options={dropdownOptions} 
           defaultValue={selectedValue} 
           onSelect={handleSelect} 

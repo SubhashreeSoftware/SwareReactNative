@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
-import CheckBoxA from '../../../atoms/CheckboxA';
+import CheckBoxA from '../../../atoms/CheckboxA/CheckboxA';
 
 const CardScreenA = () => {
   const [cardNumber, setCardNumber] = useState('');
