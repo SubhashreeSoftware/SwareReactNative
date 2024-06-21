@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import CheckBox from 'react-native-check-box';
-const CheckboxJ = () => {
+import SelectFieldAstyles from './SelectFieldA.styles';
+
+
+const SelectFieldA = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   return (
@@ -17,15 +20,6 @@ const CheckboxJ = () => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  checkbox: {
-    alignSelf: 'center',
-  },
-});
 
-export default CheckboxJ;
+
+export default SelectFieldA;

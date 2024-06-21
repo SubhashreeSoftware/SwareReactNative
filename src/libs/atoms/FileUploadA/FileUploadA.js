@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Button, Image, StyleSheet, Alert } from 'react-native';
 import { launchImageLibrary } from 'react-native-image-picker';
 import axios from 'axios';
+import FileUploadAstyles from './FileUploadA.styles';
 
 const FileUpload = () => {
   const [fileUri, setFileUri] = useState(null);
@@ -64,25 +65,13 @@ const FileUpload = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={FileUploadAstyles.container}>
       <Button title="Select File" onPress={selectFile} />
-      {fileUri && <Image source={{ uri: fileUri }} style={styles.image} />}
+      {fileUri && <Image source={{ uri: fileUri }} style={FileUploadAstyles.image} />}
       <Button title="Upload File" onPress={uploadFile} />
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  image: {
-    width: 200,
-    height: 200,
-    marginVertical: 20,
-  },
-});
 
 export default FileUpload;

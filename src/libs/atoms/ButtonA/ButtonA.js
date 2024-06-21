@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, Button, Alert } from 'react-native';
+import ButtonAstyles from './ButtonA.styles';
 
 const SimpleButton = () => {
   const handlePress = () => {
@@ -7,7 +8,7 @@ const SimpleButton = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={ButtonAstyles.container}>
       <Button
         title="Submit"
         onPress={handlePress}
@@ -15,14 +16,5 @@ const SimpleButton = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-  },
-});
 
 export default SimpleButton;

@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { View, TextInput, StyleSheet } from 'react-native';
+import TextAreaAstyles from './TextAreaA.styles';
 
 const TextareaExample = () => {
   const [text, setText] = useState('');
 
   return (
-    <View style={styles.container}>
+    <View style={TextAreaAstyles.container}>
       <TextInput
-        style={styles.textarea}
+        style={TextAreaAstyles.textarea}
         onChangeText={setText}
         value={text}
         placeholder='Enter your text here...'
@@ -18,17 +19,5 @@ const TextareaExample = () => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    margin: 12,
-  },
-  textarea: {
-    height: 100,
-    borderColor: 'gray',
-    borderWidth: 1,
-    padding: 10,
-    textAlignVertical: 'top',
-  },
-});
 
 export default TextareaExample;
