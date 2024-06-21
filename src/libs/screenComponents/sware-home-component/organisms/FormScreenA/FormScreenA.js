@@ -9,6 +9,7 @@ import ImageUploadA from '../../../atoms/ImageUploadA/ImageUploadA';
 import CheckboxA from '../../../atoms/CheckboxA/CheckboxA';
 import FileUploadA from '../../../atoms/FileUploadA/FileUploadA';
 import SelectFieldA from '../../../atoms/SelectFieldA/SelectFieldA';
+import FormScreenAstyles from './FormScreenA.styles';
 
 const FormScreenA = () => {
   const [selectedValue, setSelectedValue] = useState('option1');
@@ -23,9 +24,9 @@ const FormScreenA = () => {
   };
 
   return (
-    <ScrollView contentContainerStyle={styles.scrollContainer}>
-      <Text style={styles.screenText}>Form Page</Text>
-      <View style={styles.formContainer}>
+    <ScrollView contentContainerStyle={FormScreenAstyles.scrollContainer}>
+      <Text style={FormScreenAstyles.screenText}>Form Page</Text>
+      <View style={FormScreenAstyles.formContainer}>
         <TextInputExample />
         <PasswordInput />
         <SelectFieldA 
@@ -54,29 +55,5 @@ const dropdownOptions = [
   { label: 'Other', value: 'option3' },
 ];
 
-const styles = StyleSheet.create({
-  scrollContainer: {
-    flexGrow: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 16,
-  },
-  screenText: {
-    fontSize: 24,
-    marginBottom: 20,
-  },
-  formContainer: {
-    width: '100%',
-    padding: 20,
-    borderWidth: 2,
-    borderColor: '#007BFF',
-    borderRadius: 8,
-    backgroundColor: '#FFF',
-    shadowColor: '#000',
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
-  },
-});
 
 export default FormScreenA;

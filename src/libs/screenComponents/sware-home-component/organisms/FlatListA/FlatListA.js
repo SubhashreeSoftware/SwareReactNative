@@ -1,5 +1,6 @@
 import React from 'react';
 import { FlatList, View, Text, Image, StyleSheet } from 'react-native';
+import FlatListAstyles from './FlatListA.styles';
 
 const transactions = [
   {
@@ -38,20 +39,20 @@ const transactions = [
 
 const FlatListA = () => {
   return (
-    <View style={styles.container}>
+    <View style={FlatListAstyles.container}>
       <FlatList
         data={transactions}
         keyExtractor={item => item.id}
         renderItem={({ item }) => (
-          <View style={styles.item}>
-            <Image source={item.icon} style={styles.icon} />
-            <View style={styles.textContainer}>
-              <Text style={styles.title}>{item.title}</Text>
-              <Text style={styles.description}>{item.description}</Text>
+          <View style={FlatListAstyles.item}>
+            <Image source={item.icon} style={FlatListAstyles.icon} />
+            <View style={FlatListAstyles.textContainer}>
+              <Text style={FlatListAstyles.title}>{item.title}</Text>
+              <Text style={FlatListAstyles.description}>{item.description}</Text>
             </View>
-            <View style={styles.rightContainer}>
-              <Text style={styles.amount}>{item.amount}</Text>
-              <Text style={styles.date}>{item.date}</Text>
+            <View style={FlatListAstyles.rightContainer}>
+              <Text style={FlatListAstyles.amount}>{item.amount}</Text>
+              <Text style={FlatListAstyles.date}>{item.date}</Text>
             </View>
           </View>
         )}
@@ -60,46 +61,6 @@ const FlatListA = () => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    padding: 16,
-  },
-  item: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingVertical: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: '#ddd',
-  },
-  icon: {
-    width: 40,
-    height: 40,
-    marginRight: 16,
-  },
-  textContainer: {
-    flex: 1,
-  },
-  title: {
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
-  description: {
-    fontSize: 14,
-    color: '#666',
-  },
-  rightContainer: {
-    alignItems: 'flex-end',
-  },
-  amount: {
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
-  date: {
-    fontSize: 14,
-    color: '#666',
-  },
-});
+
 
 export default FlatListA;

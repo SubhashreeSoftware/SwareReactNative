@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import CheckBoxA from '../../../atoms/CheckboxA/CheckboxA';
+import CardScreenAstyles from './CardScreenA.styles';
 
 const CardScreenA = () => {
   const [cardNumber, setCardNumber] = useState('');
@@ -12,9 +13,9 @@ const CardScreenA = () => {
   const [saveCardInfo, setSaveCardInfo] = useState(false);
 
   return (
-    <View style={styles.container}>
+    <View style={CardScreenAstyles.container}>
       <TextInput
-        style={styles.input}
+        style={CardScreenAstyles.input}
         value={cardNumber}
         onChangeText={setCardNumber}
         keyboardType="numeric"
@@ -22,17 +23,17 @@ const CardScreenA = () => {
         placeholderTextColor="#999"
       />
       <TextInput
-        style={styles.input}
+        style={CardScreenAstyles.input}
         value={cardHolderName}
         onChangeText={setCardHolderName}
         placeholder="CARDHOLDER'S NAME"
         placeholderTextColor="#999"
       />
-      <View style={styles.row}>
-        <View style={styles.pickerContainer}>
+      <View style={CardScreenAstyles.row}>
+        <View style={CardScreenAstyles.pickerContainer}>
           <Picker
             selectedValue={expiryMonth}
-            style={styles.picker}
+            style={CardScreenAstyles.picker}
             onValueChange={(itemValue) => setExpiryMonth(itemValue)}
           >
             <Picker.Item label="MM" value="" />
@@ -50,10 +51,10 @@ const CardScreenA = () => {
             <Picker.Item label="12" value="12" />
           </Picker>
         </View>
-        <View style={styles.pickerContainer}>
+        <View style={CardScreenAstyles.pickerContainer}>
           <Picker
             selectedValue={expiryYear}
-            style={styles.picker}
+            style={CardScreenAstyles.picker}
             onValueChange={(itemValue) => setExpiryYear(itemValue)}
           >
             <Picker.Item label="YYYY" value="" />
@@ -64,7 +65,7 @@ const CardScreenA = () => {
       
         </View>
         <TextInput
-          style={[styles.input, styles.cvvInput]}
+          style={[CardScreenAstyles.input, CardScreenAstyles.cvvInput]}
           value={cvv}
           onChangeText={setCvv}
           keyboardType="numeric"
@@ -80,84 +81,16 @@ const CardScreenA = () => {
         onChange={() => setSaveCardInfo(!saveCardInfo)}
       />
 
-      <TouchableOpacity style={styles.nextButton}>
-        <Text style={styles.nextButtonText}>Next</Text>
+      <TouchableOpacity style={CardScreenAstyles.nextButton}>
+        <Text style={CardScreenAstyles.nextButtonText}>Next</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.backButton}>
-        <Text style={styles.backButtonText}>Back</Text>
+      <TouchableOpacity style={CardScreenAstyles.backButton}>
+        <Text style={CardScreenAstyles.backButtonText}>Back</Text>
       </TouchableOpacity>
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 20,
-    backgroundColor: '#fff',
-    borderRadius: 10,
-    marginHorizontal: 20,
-    width: '100%',
-    alignSelf: 'center',
-    shadowColor: '#000',
-    shadowOffset: { width: 5, height: 4 },
-    shadowOpacity: 0.4,
-    shadowRadius: 8,
-    elevation: 5,
-  },
-  input: {
-    borderWidth: 1,
-    borderColor: '#ddd',
-    padding: 15,
-    marginBottom: 10,
-    borderRadius: 5,
-    backgroundColor: '#f9f9f9',
-  },
-  row: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    marginBottom: 10,
-  },
-  pickerContainer: {
-    flex: 1,
-    marginRight: 10,
-    borderWidth: 1,
-    borderColor: '#ddd',
-    borderRadius: 5,
-    backgroundColor: '#f9f9f9',
-    justifyContent: 'center',
-  },
-  picker: {
-    height: 50,
-    width: '100%',
-  },
-  cvvInput: {
-    flex: 1,
-    marginLeft: 10,
-  },
-  nextButton: {
-    backgroundColor: '#007BFF',
-    padding: 15,
-    borderRadius: 5,
-    alignItems: 'center',
-    marginBottom: 10,
-  },
-  nextButtonText: {
-    color: '#fff',
-    fontSize: 20,
-  },
-  backButton: {
-    padding: 15,
-    borderRadius: 5,
-    alignItems: 'center',
-    borderColor: '#ddd',
-    borderWidth: 1,
-  },
-  backButtonText: {
-    fontSize: 20,
-    color: '#007BFF',
-  },
-});
+
 
 export default CardScreenA;

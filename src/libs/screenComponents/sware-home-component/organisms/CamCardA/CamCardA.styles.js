@@ -1,36 +1,12 @@
-import React from 'react';
-import { View, StyleSheet, Text, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { Color, Padding } from "../../../../GlobalStyles";
+import CssA from '../CommonCss/CSSA';
 
-const CamCardA = () => {
-    return (
-        <View style={styles.container}>
-            <View style={styles.card}>
-                <Image
-                    source={require('../../../../../assets/Cam.jpg')}
-                    style={styles.image}
-                />
-                <View style={styles.infoContainer}>
-                    <View style={styles.textContainer}>
-                        <Text style={styles.title}>Nest Cam</Text>
-                        <Text style={styles.price}>$179</Text>
-                    </View>
-                    <TouchableOpacity style={styles.button}>
-                        <Text style={styles.buttonText}>+</Text>
-                    </TouchableOpacity>
-                </View>
-            </View>
-        </View>
-    );
-};
-
-const styles = StyleSheet.create({
+const CamCardAstyles = StyleSheet.create({
     container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginVertical: 40,
-    },
-    card: {
+        ...CssA.container
+      },
+      card: {
         backgroundColor: '#f0f4f8',
         borderRadius: 16,
         padding: 20,
@@ -91,4 +67,5 @@ const styles = StyleSheet.create({
     },
 });
 
-export default CamCardA;
+
+export default CamCardAstyles;
