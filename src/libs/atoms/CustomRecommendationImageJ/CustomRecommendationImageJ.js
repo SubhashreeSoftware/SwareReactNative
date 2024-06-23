@@ -1,6 +1,7 @@
 import React from 'react';
 import { FlatList, Image, StyleSheet, View, Dimensions, Text } from 'react-native';
 import CustomRecommendationImageJstyles from './CustomRecommendationImageJ.styles';
+import CssJ from '../CommonCss/CssJ';
 
 const images = [
   {
@@ -82,7 +83,8 @@ const numColumns = 2; // Set the number of columns to 2
 
 const CustomRecommendationImageJ = () => {
   return (
-    <FlatList
+    <View style={CssJ.container}>
+ <FlatList
       data={images}
       keyExtractor={item => item.id}
       renderItem={({ item }) => (
@@ -105,6 +107,8 @@ const CustomRecommendationImageJ = () => {
       numColumns={numColumns}
       contentContainerStyle={CustomRecommendationImageJstyles.container}
     />
+    </View>
+       
   );
 };
 

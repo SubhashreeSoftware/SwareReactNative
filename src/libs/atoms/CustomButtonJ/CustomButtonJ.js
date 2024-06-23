@@ -1,42 +1,49 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Image} from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Image, ScrollView} from 'react-native';
 import CustomButtonJstyles from './CustomButtonJ.styles';
 
-const CustomButtonJ = ({ onPress, title }) => {
+const CustomButtonJ = ({ onPress,image1,image2,image3,image4, title1,title2,title3,title4 }) => {
   return (
+    <ScrollView
+    horizontal
+    >
+
     <TouchableOpacity onPress={onPress} style={CustomButtonJstyles.container}>
+    
       <View style={CustomButtonJstyles.button}>
         <Image
-          source={require('../../../../assets/correct.png')}
+          source={image1}
           style={CustomButtonJstyles.image}
         />
-        <Text style={CustomButtonJstyles.buttonText}>{title}All</Text>
+        <Text style={CustomButtonJstyles.buttonText}>{title1}</Text>
       </View>
+      </TouchableOpacity>
 
-      <View style={CustomButtonJstyles.buttonTwo}>
+      <View style={[CustomButtonJstyles.button,CustomButtonJstyles.buttonTwo]}>
       <Image
-          source={require('../../../../assets/house.png')}
+          source={image2}
           style={CustomButtonJstyles.image}
         />
-        <Text style={CustomButtonJstyles.buttonTexttwo}>{title} House</Text>
+        <Text style={CustomButtonJstyles.buttonTexttwo}>{title2}</Text>
       </View>
 
-      <View style={CustomButtonJstyles.buttonTwo}>
+      <View style={[CustomButtonJstyles.button,CustomButtonJstyles.buttonTwo]}>
         <Image
-          source={require('../../../../assets/villa.png')}
+          source={image3}
           style={CustomButtonJstyles.image}
         />
-        <Text style={CustomButtonJstyles.buttonTexttwo}>{title}Villa</Text>
+        <Text style={CustomButtonJstyles.buttonTexttwo}>{title3}</Text>
       </View>
 
-      <View style={CustomButtonJstyles.buttonTwo}>
+      <View style={[CustomButtonJstyles.button,CustomButtonJstyles.buttonTwo]}>
         <Image
-          source={require('../../../../assets/apartment.png')}
+          source={image4}
           style={CustomButtonJstyles.image}
         />
-        <Text style={CustomButtonJstyles.buttonTexttwo}>{title}Apartment</Text>
+        <Text style={CustomButtonJstyles.buttonTexttwo}>{title4}</Text>
       </View>
-    </TouchableOpacity>
+    </ScrollView>
+
   );
 };
 

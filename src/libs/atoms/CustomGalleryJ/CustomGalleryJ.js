@@ -4,12 +4,16 @@ import { Image, ImageBackground, StyleSheet, View, Text } from 'react-native';
 import CustomGalleryJstyles from './CustomGalleryJ.styles';
 import CssJ from '../CommonCss/CssJ';
 
-const CustomGalleryJ = () => {
+const CustomGalleryJ = ({image1}) => {
     return (
         <View style={CssJ.container}>
             <View style={CustomGalleryJstyles.scrollContainer}>
                 <Image
                     source={require('../../../../assets/whiteBuilding.jpg')}
+                    style={CustomGalleryJstyles.image}
+                />
+                <Image
+                    source={image1}
                     style={CustomGalleryJstyles.image}
                 />
                 <Image

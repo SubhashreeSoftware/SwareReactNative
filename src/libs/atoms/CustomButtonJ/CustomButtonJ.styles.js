@@ -21,24 +21,16 @@ const CustomButtonJstyles = StyleSheet.create({
     
       },
       buttonTwo: {
-        height: 46,
-        width: 90,
-        borderRadius: 25, 
         backgroundColor: 'white',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: 30,
         borderWidth: 2,
         borderColor: '#007bff',
-        flexDirection: 'row',
         marginHorizontal: 3, 
-    
       },
      
       buttonText: {
         color: 'white',
         fontSize: 15,
-        paddingLeft: 5,
+        paddingLeft: 10,
       },
       buttonTexttwo: {
         color: '#007bff',
@@ -47,8 +39,7 @@ const CustomButtonJstyles = StyleSheet.create({
       image: {
         height:20,
         width: 20,
-        borderRadius: 5,
-        
+        // marginRight: 5,
       }
      
 });

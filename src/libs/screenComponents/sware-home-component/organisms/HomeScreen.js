@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, FlatList, ScrollView } from 'react-native';
 import FormScreenA from './FormScreenA/FormScreenA';
-import FormScreenA from './FormScreenA/FormScreenA';
 import FormScreenJ from './FormScreenJ/FormScreenJ';
 import CardScreenA from './CardScreenA/CardScreenA';
 import CamCardA from './CamCardA/CamCardA';
@@ -9,14 +8,14 @@ import PropertiesA from './PropertiesA/PropertiesA';
 import FlatListA from './FlatListA/FlatListA';
 import CardscreenJ from './CardScreenJ/CardscreenJ';
 import FlatlistJ from './FlatlistJ/FlatlistJ';
-import CardscreenJ from './CardScreenJ/CardscreenJ';
-import FlatlistJ from './FlatlistJ/FlatlistJ';
 import CustomGalleryJ from '../../../atoms/CustomGalleryJ/CustomGalleryJ';
 import CustomButtonJ from '../../../atoms/CustomButtonJ/CustomButtonJ';
 import CustomRecommendationImageJ from '../../../atoms/CustomRecommendationImageJ/CustomRecommendationImageJ';
-
+import { useNavigation } from '@react-navigation/native';
 
 const HomeScreen = () => {
+  const navigation = useNavigation();
+
   const data = [
     { id: 'formA', component: <FormScreenA /> },
     { id: 'cardA', component: <CardScreenA /> },
@@ -49,8 +48,18 @@ const HomeScreen = () => {
           contentContainerStyle={styles.container}
         />
         <FlatlistJ /> */}
-<CustomGalleryJ/>
-        <CustomButtonJ/>
+        <CustomGalleryJ/>
+        <CustomButtonJ
+        image1={require('../../../../../assets/correct.png')}
+        title1="Card"
+        onPress={() => { navigation.navigate('TestScreen') }}
+        image2={require('../../../../../assets/house.png')}
+        image3={require('../../../../../assets/villa.png')}
+        image4={require('../../../../../assets/apartment.png')}
+        title2="House"
+        title3="Villa"
+        title4="Apartment"
+        />
         <CustomRecommendationImageJ/>
       </ScrollView>
     </View>
