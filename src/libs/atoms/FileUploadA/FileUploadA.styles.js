@@ -1,0 +1,18 @@
+import { StyleSheet } from 'react-native';
+
+const FileUploadAstyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    // backgroundColor: Color.white,
+  },
+      image: {
+        width: 200,
+        height: 200,
+        marginVertical: 20,
+      },
+});
+
+
+export default FileUploadAstyles;
