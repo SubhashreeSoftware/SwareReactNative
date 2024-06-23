@@ -11,7 +11,7 @@ import FileUploadA from '../../../../atoms/FileUploadA/FileUploadA';
 import SelectFieldA from '../../../../atoms/SelectFieldA/SelectFieldA';
 import FormScreenAstyles from './FormScreenA.styles';
 
-const FormScreenA = () => {
+export default function FormScreenA()  {
   const [selectedValue, setSelectedValue] = useState('option1');
   const [isChecked, setIsChecked] = useState(false); 
 
@@ -22,6 +22,13 @@ const FormScreenA = () => {
   const handleSelect = (value) => {
     setSelectedValue(value);
   };
+
+  const dropdownOptions = [
+    { label: 'Male', value: 'option1' },
+    { label: 'Female', value: 'option2' },
+    { label: 'Other', value: 'option3' },
+  ];
+  
 
   return (
     <ScrollView contentContainerStyle={FormScreenAstyles.scrollContainer}>
@@ -49,11 +56,5 @@ const FormScreenA = () => {
   );
 };
 
-const dropdownOptions = [
-  { label: 'Male', value: 'option1' },
-  { label: 'Female', value: 'option2' },
-  { label: 'Other', value: 'option3' },
-];
 
 
-export default FormScreenA;
