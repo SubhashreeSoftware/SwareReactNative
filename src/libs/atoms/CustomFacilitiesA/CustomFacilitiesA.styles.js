@@ -22,7 +22,7 @@ const CustomFacilitiesAstyles = StyleSheet.create({
   },
   facilityText: {
     textAlign: 'center',
-    fontSize: 12,
+    fontSize: 14,
   },
 });
 

@@ -7,7 +7,7 @@ const CamCardA = () => {
         <View style={CamCardAstyles.container}>
             <View style={CamCardAstyles.card}>
                 <Image
-                    source={require('../../../../../../assets/Cam.jpg')}
+                    source={require('../../../../../../assets/Form/Cam.jpg')}
                     style={CamCardAstyles.image}
                 />
                 <View style={CamCardAstyles.infoContainer}>

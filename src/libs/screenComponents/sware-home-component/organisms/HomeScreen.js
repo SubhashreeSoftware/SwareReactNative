@@ -11,8 +11,8 @@ import CustomSearchBarA from '../../../atoms/CustomSearchBarA/CustomSearchBarA';
 
 
 // Profile image and bell icon for Header@A
-const profileImage = require('../../../../../assets/brookly.png');
-const bellIcon = require('../../../../../assets/notification.png');
+const profileImage = require('../../../../../assets/Header/brookly.png');
+const bellIcon = require('../../../../../assets/Header/notification.png');
 
 // Practise section
 import CardscreenJ from './CardScreenJ/CardscreenJ';
@@ -54,7 +54,7 @@ const HomeScreen = () => {
       location: 'New York, US',
       price: '$29 / Night',
       rating: 4.8,
-      backgroundImage: require('../../../../../assets/Image1.jpg'),
+      backgroundImage: require('../../../../../assets/Features/Image1.jpg'),
     },
     {
       id: '2',
@@ -62,7 +62,7 @@ const HomeScreen = () => {
       location: 'Paris, France',
       price: '$32 / night',
       rating: 4.6,
-      backgroundImage: require('../../../../../assets/Image2.jpg'),
+      backgroundImage: require('../../../../../assets/Features/Image2.jpg'),
     },
     {
       id: '3',
@@ -70,7 +70,7 @@ const HomeScreen = () => {
       location: 'Malibu, US',
       price: '$45 / night',
       rating: 4.9,
-      backgroundImage: require('../../../../../assets/Image3.jpg'),
+      backgroundImage: require('../../../../../assets/Features/Image3.jpg'),
     },
     {
       id: '4',
@@ -78,7 +78,7 @@ const HomeScreen = () => {
       location: 'Santorini, Greece',
       price: '$50 / night',
       rating: 4.7,
-      backgroundImage: require('../../../../../assets/Image4.jpg'),
+      backgroundImage: require('../../../../../assets/Features/Image4.jpg'),
     },
     {
       id: '5',
@@ -86,20 +86,20 @@ const HomeScreen = () => {
       location: 'Tokyo, Japan',
       price: '$40 / night',
       rating: 4.5,
-      backgroundImage: require('../../../../../assets/Image5.jpg'),
+      backgroundImage: require('../../../../../assets/Features/Image5.jpg'),
     },
   ];
 
   // Facilities section
   const facilities = [
-    { name: 'First Card', icon: require('../../../../../assets/car-parking.png') },
-    { name: 'FlatList', icon: require('../../../../../assets/swim.png') },
-    { name: 'Form', icon: require('../../../../../assets/dumbbell.png') },
-    { name: 'E-receipt', icon: require('../../../../../assets/cutlery.png') },
-    { name: 'Help Center', icon: require('../../../../../assets/connection.png') },
-    { name: 'Pet Center', icon: require('../../../../../assets/welfare.png') },
-    { name: 'Sport Center', icon: require('../../../../../assets/exercise.png') },
-    { name: 'Laundry', icon: require('../../../../../assets/laundry-machine.png') },
+    { name: 'First Card', icon: require('../../../../../assets/Facilities/parked-car.png') },
+    { name: 'FlatList', icon: require('../../../../../assets/Facilities/swim.png') },
+    { name: 'Form', icon: require('../../../../../assets/Facilities/weightlifting.png') },
+    { name: 'E-receipt', icon: require('../../../../../assets/Facilities/serving-dish.png') },
+    { name: 'Help Center', icon: require('../../../../../assets/Facilities/wifi-signal.png') },
+    { name: 'Pet Center', icon: require('../../../../../assets/Facilities/animals.png') },
+    { name: 'Sport Center', icon: require('../../../../../assets/Facilities/tennis.png') },
+    { name: 'Laundry', icon: require('../../../../../assets/Facilities/washing-machine.png') },
   ];
 
   return (

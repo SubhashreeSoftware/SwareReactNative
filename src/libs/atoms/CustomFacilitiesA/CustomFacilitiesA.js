@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import CustomFacilitiesAstyles from './CustomFacilitiesA.styles'; 
-import CssA from '../CommonCss/CSSA';
+import CssA from '../CommonCss/CssA';
 
 const CustomFacilitiesA = ({ facilities }) => {
   return (

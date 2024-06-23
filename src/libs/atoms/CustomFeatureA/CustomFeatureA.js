@@ -20,7 +20,7 @@ const FeatureCard = ({ name, location, price, rating, backgroundImage }) => (
         <Text style={CustomFeatureAstyles.location}>{location}</Text>
         <View style={CustomFeatureAstyles.priceContainer}>
           <Text style={CustomFeatureAstyles.price}>{price}</Text>
-          <Image source={require('../../../../assets/heart.png')} style={CustomFeatureAstyles.heartIcon} />
+          <Image source={require('../../../../assets/Features/heart.png')} style={CustomFeatureAstyles.heartIcon} />
         </View>
       </View>
     </ImageBackground>
