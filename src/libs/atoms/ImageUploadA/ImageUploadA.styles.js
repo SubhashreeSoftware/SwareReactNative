@@ -1,11 +1,12 @@
 import { StyleSheet } from 'react-native';
-import { Color, Padding } from "../../../../GlobalStyles";
-import CssA from '../CommonCss/CSSA';
 
 const ImageUploadAstyles = StyleSheet.create({
-    container: {
-        ...CssA.container
-      },
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    // backgroundColor: Color.white,
+  },
       backgroundImage: {
         width: '100%', 
         height: 300, 

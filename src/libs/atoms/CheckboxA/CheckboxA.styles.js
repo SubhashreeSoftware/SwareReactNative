@@ -1,10 +1,11 @@
 import { StyleSheet } from 'react-native';
-import { Color, Padding } from "../../../../GlobalStyles";
-import CssA from '../CommonCss/CSSA';
 
 const CheckboxAstyles = StyleSheet.create({
     container: {
-        ...CssA.container
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        // backgroundColor: Color.white,
       },
     checkbox: {
         width: 20,

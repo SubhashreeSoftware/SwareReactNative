@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-import { Color, Padding } from "../../../../GlobalStyles";
 
 const ButtonAstyles = StyleSheet.create({
     // container: {
