@@ -14,8 +14,6 @@ const FlatlistJstyles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         borderRadius: 20,
-        
-    
       },
       image: {
         width: 70,

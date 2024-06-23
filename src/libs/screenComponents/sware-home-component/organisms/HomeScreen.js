@@ -8,6 +8,10 @@ import PropertiesA from './PropertiesA/PropertiesA';
 import FlatListA from './FlatListA/FlatListA';
 import CardscreenJ from './CardScreenJ/CardscreenJ';
 import FlatlistJ from './FlatlistJ/FlatlistJ';
+import CustomGalleryJ from '../../../atoms/CustomGalleryJ/CustomGalleryJ';
+import CustomButtonJ from '../../../atoms/CustomButtonJ/CustomButtonJ';
+import CustomRecommendationImageJ from '../../../atoms/CustomRecommendationImageJ/CustomRecommendationImageJ';
+
 
 const HomeScreen = () => {
   const data = [
@@ -29,22 +33,25 @@ const HomeScreen = () => {
 
   return (
     <View style={styles.scrollContainer}>
-<ScrollView>
-    <FormScreenA />
-    <CardScreenA />
-    <CamCardA />
-    <FormScreenJ />
-    <CardscreenJ/>
-    <FlatList
-      data={data}
-      renderItem={renderItem}
-      keyExtractor={item => item.id}
-      contentContainerStyle={styles.container}
-    />
-    <FlatlistJ/>
-    </ScrollView>
+      <ScrollView>
+        {/* <FormScreenA />
+        <CardScreenA />
+        <CamCardA />
+        <FormScreenJ />
+        <CardscreenJ />
+        <FlatList
+          data={data}
+          renderItem={renderItem}
+          keyExtractor={item => item.id}
+          contentContainerStyle={styles.container}
+        />
+        <FlatlistJ /> */}
+        <CustomGalleryJ/>
+        <CustomButtonJ/>
+        <CustomRecommendationImageJ/>
+      </ScrollView>
     </View>
-    
+
   );
 };
 
