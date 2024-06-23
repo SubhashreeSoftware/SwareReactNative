@@ -122,8 +122,9 @@ const HomeScreen = () => {
         <CustomFeatureA properties={properties} />
         <Header2A title1="Arpita's Components" title2="" />
         <CustomFacilitiesA facilities={facilities} />
+        <Header2A title1="Julusmita's gallery" title2="" />
+
         <CustomGalleryJ />
-        <Header2A title1="Julusmita's Components" title2="" />
 
         <CustomButtonJ
           image1={require('../../../../../assets/correct.png')}
@@ -136,6 +137,8 @@ const HomeScreen = () => {
           title3="Villa"
           title4="Apartment"
         />
+        <Header2A title1="Julusmita's Products" title2="" />
+
         <CustomRecommendationImageJ />
         {/* <FormScreenA />
     <CardScreenA />

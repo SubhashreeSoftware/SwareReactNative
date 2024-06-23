@@ -6,7 +6,7 @@ import CssJ from '../CommonCss/CssJ';
 
 const CustomGalleryJ = ({image1}) => {
     return (
-        <View style={CssJ.container}>
+        <View style={[CssJ.container,{justifyContent: "flex-start", alignSelf: "flex-start"}]}>
             <View style={CustomGalleryJstyles.scrollContainer}>
                 <Image
                     source={require('../../../../assets/whiteBuilding.jpg')}

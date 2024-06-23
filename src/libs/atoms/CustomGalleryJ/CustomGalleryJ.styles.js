@@ -1,24 +1,25 @@
 import { StyleSheet } from 'react-native';
-import { Color, Padding } from "../../../../GlobalStyles";
+import { Color, FontSize, Padding } from "../../../../GlobalStyles";
 
 const CustomGalleryJstyles = StyleSheet.create({
     scrollContainer: {
         flexDirection: 'row',
-        alignItems: 'center',
+        justifyContent: "flex-start",
+        // alignItems: 'center',
         paddingHorizontal: 10,
     },
     image: {
         width: 100,
         height: 100,
         marginHorizontal: 5,
-        marginTop: 20,
+        // marginTop: 20,
         borderRadius: 15,
     },
     chairimage: {
         width: 100,
         height: 100,
         marginHorizontal: 5,
-        marginTop: 20,
+        // marginTop: 20,
         borderRadius: 15,
         backgroundColor: 'red',
     },
@@ -31,7 +32,7 @@ const CustomGalleryJstyles = StyleSheet.create({
     },
     text: {
         color: 'white',
-        fontSize: 17,
+        fontSize: FontSize.size_lg,
         
     },
     imageBackground: {
@@ -40,7 +41,7 @@ const CustomGalleryJstyles = StyleSheet.create({
         backgroundColor: 'rgba(0, 0, 0, 0.5)',
         borderRadius: 15,
         overflow: 'hidden', 
-        marginTop: 20,
+        // marginTop: 20,
         marginHorizontal: 5,
       },
      
