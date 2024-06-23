@@ -12,7 +12,7 @@ const InputA = ({inputtext}) => {
         style={InputAstyles.input}
         onChangeText={setEmail}
         value={email}
-        placeholder={inputtext}
+        placeholder="Enter your email"
         keyboardType="email-address"
         autoCapitalize="none"
       />

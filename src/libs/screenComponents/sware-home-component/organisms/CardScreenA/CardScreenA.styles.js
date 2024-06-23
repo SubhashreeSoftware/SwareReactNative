@@ -1,9 +1,11 @@
 import { StyleSheet } from 'react-native';
-import CssA from '../../../../atoms/CommonCss/CSSA';
 
 const CardScreenAstyles = StyleSheet.create({
     container: {
-        ...CssA.container
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        // backgroundColor: Color.white,
       },
       input: {
         borderWidth: 1,

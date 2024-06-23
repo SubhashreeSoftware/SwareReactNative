@@ -1,11 +1,12 @@
 import { StyleSheet } from 'react-native';
-import { Color, Padding } from "../../../../GlobalStyles";
-import CssA from '../CommonCss/CSSA';
 
 const TextAreaAstyles = StyleSheet.create({
-    container: {
-        ...CssA.container
-      },
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    // backgroundColor: Color.white,
+  },
       textarea: {
         height: 100,
         borderColor: 'gray',

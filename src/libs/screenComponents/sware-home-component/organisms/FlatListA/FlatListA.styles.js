@@ -1,9 +1,11 @@
 import { StyleSheet } from 'react-native';
-import CssA from '../../../../atoms/CommonCss/CSSA';
 
 const FlatListAstyles = StyleSheet.create({
     container: {
-        ...CssA.container
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        // backgroundColor: Color.white,
       },
       item: {
         flexDirection: 'row',

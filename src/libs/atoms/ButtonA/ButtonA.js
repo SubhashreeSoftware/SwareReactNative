@@ -1,12 +1,20 @@
-import { Text, View } from 'react-native'
-import React, { Component } from 'react'
+import React from 'react';
+import { View, StyleSheet, Button, Alert } from 'react-native';
+import ButtonAstyles from './ButtonA.styles';
 
-export default class ButtonA extends Component {
-  render() {
-    return (
-      <View>
-        <Text>ButtonA</Text>
-      </View>
-    )
-  }
-}
+const SimpleButton = () => {
+  const handlePress = () => {
+    Alert.alert('Button pressed!');
+  };
+
+  return (
+    <View style={ButtonAstyles.container}>
+      <Button
+        title="Submit"
+        onPress={handlePress}
+      />
+    </View>
+  );
+};
+
+export default SimpleButton;

@@ -6,7 +6,7 @@ const CssJ = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: Color.whitesmoke_100,
+    backgroundColor: Color.white,
   },
   input: {
     height: 40,

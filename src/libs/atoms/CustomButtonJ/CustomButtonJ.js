@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image, ScrollView} from 'react-native';
 import CustomButtonJstyles from './CustomButtonJ.styles';
+import CssJ from '../CommonCss/CssJ';
 
 const CustomButtonJ = ({ onPress,image1,image2,image3,image4, title1,title2,title3,title4 }) => {
   return (
@@ -8,7 +9,7 @@ const CustomButtonJ = ({ onPress,image1,image2,image3,image4, title1,title2,titl
     horizontal
     >
 
-    <TouchableOpacity onPress={onPress} style={CustomButtonJstyles.container}>
+    <TouchableOpacity onPress={onPress} style={CssJ.container}>
     
       <View style={CustomButtonJstyles.button}>
         <Image

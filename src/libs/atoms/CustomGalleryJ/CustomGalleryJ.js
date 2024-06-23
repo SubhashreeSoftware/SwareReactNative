@@ -13,10 +13,6 @@ const CustomGalleryJ = ({image1}) => {
                     style={CustomGalleryJstyles.image}
                 />
                 <Image
-                    source={image1}
-                    style={CustomGalleryJstyles.image}
-                />
-                <Image
                     source={require('../../../../assets/flat.jpg')}
                     style={CustomGalleryJstyles.image}
                 />
