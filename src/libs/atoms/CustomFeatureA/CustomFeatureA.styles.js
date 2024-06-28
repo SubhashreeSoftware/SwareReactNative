@@ -1,16 +1,16 @@
 import { StyleSheet } from 'react-native';
-import { Color } from '../../../../GlobalStyles';
+import { Border, Color, FontSize, Margin, Padding } from '../../../../GlobalStyles';
 
 const CustomFeatureAstyles = StyleSheet.create({
   featuredContainer: {
-    marginVertical: 10,
+    marginVertical: Margin.m_3xs,
   },
   listContainer: {
-    paddingLeft: 15,
+    paddingLeft: Padding.p_mini,
   },
   cardContainer: {
-    marginRight: 15,
-    borderRadius: 10,
+    marginRight: Margin.m_mini,
+    borderRadius: Border.br_3xs,
     overflow: 'hidden',
     width: 250,
     height: 300,
@@ -24,51 +24,50 @@ const CustomFeatureAstyles = StyleSheet.create({
     top: 10,
     right: 10,
     backgroundColor: Color.white,
-    borderRadius: 10,
-    paddingHorizontal: 5,
+    borderRadius: Border.br_3xs,
+    paddingHorizontal: Padding.p_8xs,
     flexDirection: 'row',
     alignItems: 'center',
   },
   star: {
     color: Color.yellow,
-    fontSize: 14,
-    marginRight: 3,
+    fontSize: FontSize.size_sm,
+    marginRight: Margin.m_10xs,
   },
   rating: {
     color: '#1C72FB',
     fontWeight: 'bold',
-    fontSize: 14,
+    fontSize: FontSize.size_sm,
   },
   gradient: {
     ...StyleSheet.absoluteFillObject,
   },
   infoContainer: {
-    padding: 10,
+    padding: Padding.p_3xs,
   },
   name: {
-    fontSize: 20,
+    fontSize:FontSize.size_xl,
     fontWeight: 'bold',
     color: Color.white,
   },
   location: {
-    fontSize: 14,
+    fontSize: FontSize.size_sm,
     color: '#f2f2f2',
   },
   priceContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',  
-    // marginTop: 5, 
   },
   price: {
-    fontSize: 16,
+    fontSize: FontSize.size_base,
     color: Color.white,
     flex: 1,  
   },
   heartIcon: {
     width: 20,
     height: 20,
-    marginLeft: 5,
+    marginLeft: Margin.m_8xs,
   },
     }); 
 

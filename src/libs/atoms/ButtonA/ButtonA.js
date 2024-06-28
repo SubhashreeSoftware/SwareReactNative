@@ -1,19 +1,13 @@
+
 import React from 'react';
-import { View, StyleSheet, Button, Alert } from 'react-native';
+import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 import ButtonAstyles from './ButtonA.styles';
 
-const SimpleButton = () => {
-  const handlePress = () => {
-    Alert.alert('Button pressed!');
-  };
-
+const SimpleButton = ({ title, onPress, style, textStyle }) => {
   return (
-    <View style={ButtonAstyles.container}>
-      <Button
-        title="Submit"
-        onPress={handlePress}
-      />
-    </View>
+    <TouchableOpacity style={[ButtonAstyles.button, style]} onPress={onPress}>
+      <Text style={[ButtonAstyles.buttonText, textStyle]}>{title}</Text>
+    </TouchableOpacity>
   );
 };
 

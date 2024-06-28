@@ -1,36 +1,35 @@
 import { StyleSheet } from 'react-native';
+import { Border, Color, FontSize, Margin } from '../../../../GlobalStyles';
 
 const CheckboxAstyles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        // backgroundColor: Color.white,
-      },
-    checkbox: {
-        width: 20,
-        height: 20,
-        borderWidth: 2,
-        borderColor: '#000',
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: 2,
-      },
-      checked: {
-        backgroundColor: '#007BFF', 
-      },
-      innerChecked: {
-        width: 12,
-        height: 12,
-        backgroundColor: '#FFF', 
-        borderRadius: 2,
-      },
-      label: {
-        marginLeft: 8,
-        fontSize: 20,
-        color: '#007BFF',
-      },
+  container: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: Margin.m_3xs,
+  },
+  checkbox: {
+    width: 20,
+    height: 20,
+    borderWidth: Border.br_11xs,
+    borderColor: Color.black,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 2,
+  },
+  checked: {
+    backgroundColor: Color.primaryBlue,
+  },
+  innerChecked: {
+    width: 12,
+    height: 12,
+    backgroundColor: Color.white,
+    borderRadius: 2,
+  },
+  label: {
+    marginLeft: Margin.m_5xs,
+    fontSize: FontSize.size_base,
+    color: '#333',
+  },
 });
-
 
 export default CheckboxAstyles;

@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { FontSize } from "../../../../GlobalStyles"; 
+import { FontSize, Margin } from "../../../../GlobalStyles"; 
 
 const CustomFacilitiesAstyles = StyleSheet.create({
 
@@ -13,16 +13,19 @@ const CustomFacilitiesAstyles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   facility: {
-    width: '22%',
+    width: '25%',
     alignItems: 'center',
+    marginVertical: Margin.m_mini,
   },
   icon: {
     width: 50,
     height: 50,
+    alignSelf: "center"
   },
   facilityText: {
     textAlign: 'center',
-    fontSize: 14,
+    marginTop: Margin.m_8xs,
+    fontSize: FontSize.size_sm,
   },
 });
 

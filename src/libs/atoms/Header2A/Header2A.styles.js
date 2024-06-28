@@ -1,23 +1,23 @@
 import { StyleSheet } from 'react-native';
-
+import { Border, Color, FontSize, Margin, Padding } from '../../../../GlobalStyles';
 
 const Header2Astyles = StyleSheet.create({
   headerContainer: {
     width: '100%',
-    padding: 16,
+    padding: Padding.p_base,
     // backgroundColor: '#fff',
-    borderRadius: 8,
-    marginBottom: 16,
+    borderRadius: Border.br_5xs,
+    marginBottom: Margin.m_base,
     alignItems: 'center',
     justifyContent: 'space-between',
     flexDirection: 'row',
   },
   title: {
-    fontSize: 18,
+    fontSize: FontSize.size_lg,
     fontWeight: 'bold',
   },
   actionText: {
-    fontSize: 16,
+    fontSize: FontSize.size_base,
     color: '#1C72FB',
   },
 });

@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, ImageBackground, StyleSheet, FlatList, Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import Header2A from '../Header2A/Header2A';
 import CustomFeatureAstyles from './CustomFeatureA.styles'; 
 
 const FeatureCard = ({ name, location, price, rating, backgroundImage }) => (

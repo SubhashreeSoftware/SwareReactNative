@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import CheckboxAstyles from './CheckboxA.styles';
 
 const CheckboxA = ({ label, checked, onChange }) => {
@@ -12,6 +12,5 @@ const CheckboxA = ({ label, checked, onChange }) => {
     </TouchableOpacity>
   );
 };
-
 
 export default CheckboxA;
