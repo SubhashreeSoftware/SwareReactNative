@@ -3,8 +3,9 @@ import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList, DrawerI
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from '../../libs/screenComponents/sware-home-component/organisms/HomeScreen';
-import ProfileScreen from '../../libs/screenComponents/sware-home-component/organisms/ProfileScreen';
 import CustomFormHeader from '../../libs/atoms/CustomFormHeader';
+import ProfileScreenJ from '../../libs/screenComponents/sware-home-component/organisms/ProfileSceenJ/ProfileScreenJ';
+import ProfileHeaderJ from '../../libs/atoms/ProfileHeaderJ/ProfileHeaderJ';
 
 const Tab = createBottomTabNavigator();
 const Drawer = createDrawerNavigator();
@@ -38,7 +39,19 @@ const TabNavigator = () => {
       />
       <Tab.Screen 
       name="Profile"
-      component={ProfileScreen} 
+      component={ProfileScreenJ} 
+      options={(props) => ({
+        headerShown: true,
+        header: () => <ProfileHeaderJ
+        image={require('../../../assets/ReviewScreenJ/homeIcon.png')}
+        title= "Profile"
+        imageOne={require('../../../assets/ReviewScreenJ/more.png')}
+        
+        onPressright={() => { navigation.navigate('NotificationPage') }}
+        drawer
+        />,
+        })}
+      
       />
     </Tab.Navigator>
   );

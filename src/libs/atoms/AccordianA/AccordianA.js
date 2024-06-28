@@ -4,11 +4,20 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import CustomSearchBarA from '../CustomSearchBarA/CustomSearchBarA';
 import AccordianAStyles from './AccordianA.styles';
 import CustomButtonJ from '../CustomButtonJ/CustomButtonJ';
+import CustomFilterButtonJ from '../CustomFilterBottonJ/CustomFilterBottonJ';
 
 const AccordianA = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredQuestions, setFilteredQuestions] = useState([]);
   const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const filterButtons = [
+    { name: 'All', icon: require('../../../../assets/CustomButtonJ/correct.png') },
+    { name: 'House', icon: require('../../../../assets/CustomButtonJ/house.png') },
+    { name: 'Villa', icon: require('../../../../assets/CustomButtonJ/villa.png') },
+    { name: 'Apartment', icon: require('../../../../assets/CustomButtonJ/apartment.png') },
+
+  ];
 
   const faqQuestions = [
     { question: "Why did my payment not work?", answer: "Here is why your payment might not have worked. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur ..." },
@@ -51,7 +60,8 @@ const AccordianA = () => {
   return (
     <View style={{ flex: 1 }}>
       <CustomSearchBarA onChangeText={setSearchQuery} />
-      <CustomButtonJ />
+      <CustomFilterButtonJ filterButtons={filterButtons}
+      />
       <FlatList
         data={filteredQuestions}
         keyExtractor={(item, index) => index.toString()}

@@ -10,13 +10,19 @@ import CustomFacilitiesA from '../../../atoms/CustomFacilitiesA/CustomFacilities
 import CustomSearchBarA from '../../../atoms/CustomSearchBarA/CustomSearchBarA';
 import { useNavigation } from '@react-navigation/native';
 import Header2A from '../../../atoms/Header2A/Header2A';
+import FormScreenJ from './FormScreenJ/FormScreenJ';
+import ProfileHeaderJ from '../../../atoms/ProfileHeaderJ/ProfileHeaderJ';
+import CustomFilterJ from '../../../atoms/CustomFilterJ/CustomFilterJ';
+import CardscreenJ from './CardScreenJ/CardscreenJ';
+import FlatlistJ from './FlatlistJ/FlatlistJ';
 import CustomGalleryJ from '../../../atoms/CustomGalleryJ/CustomGalleryJ';
 import CustomButtonJ from '../../../atoms/CustomButtonJ/CustomButtonJ';
 import CustomRecommendationImageJ from '../../../atoms/CustomRecommendationImageJ/CustomRecommendationImageJ';
 
 // Profile image and bell icon for Header@A
-const profileImage = require('../../../../../assets/Header/brookly.png');
+const profileImage = require('../../../../../assets/brookly.png');
 const bellIcon = require('../../../../../assets/Header/notification.png');
+
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -123,55 +129,56 @@ const HomeScreen = () => {
   ];
 
   return (
-   <View style={{}}>
-    <ScrollView>
-  <View style={styles.header}>
-            <View style={styles.profileImageContainer}>
-              <Image source={profileImage} style={styles.profileImage} />
-            </View>
-            <View style={styles.textContainer}>
-              <Text style={styles.greetingText}>Good Morning 👋</Text>
-              <Text style={styles.nameText}>Andrew Ainsley</Text>
-            </View>
-            <View style={styles.bellIconContainer}>
-              <Image source={bellIcon} style={styles.bellIcon} />
-            </View>
+    <View style={styles.scrollContainer}>
+      <ScrollView>
+        <View style={styles.header}>
+          <View style={styles.profileImageContainer}>
+            <Image source={profileImage} style={styles.profileImage} />
           </View>
+          <View style={styles.textContainer}>
+            <Text style={styles.greetingText}>Good Morning 👋</Text>
+            <Text style={styles.nameText}>Andrew Ainsley</Text>
+          </View>
+          <View style={styles.bellIconContainer}>
+            <Image source={bellIcon} style={styles.bellIcon} />
+          </View>
+        </View>
+        <CustomSearchBarA />
+        <Header2A title1="Arpita's Featured" title2="See All" />
+        <CustomFeatureA properties={properties} />
+        <Header2A title1="Arpita's Components" title2="" />
+        <CustomFacilitiesA facilities={facilities} />
+        <Header2A title1="Gallery" title2="See All" />
+        <CustomGalleryJ />
+        <Header2A title1="Our Recommendation" title2="See All" />
+        <CustomButtonJ
+          image1={require('../../../../../assets/CustomButtonJ/correct.png')}
+          title1="Card"
+          onPress1={() => { navigation.navigate('CardscreenJ') }}
+          image2={require('../../../../../assets/CustomButtonJ/house.png')}
+          title2="flatlist"
+          onPress2={() => { navigation.navigate('FlatlistJ') }}
 
-          <CustomSearchBarA />
+          title3="Review"
+          image3={require('../../../../../assets/CustomButtonJ/villa.png')}
+          onPress3={() => { navigation.navigate('ReviewScreenJ') }}
 
-          {/* Featured Section */}
-          <Header2A title1="Arpita's Featured" title2="See All" />
-          <CustomFeatureA properties={properties} />
 
-          {/* Components Section */}
-          <Header2A title1="Arpita's Components" title2="" />
-          <CustomFacilitiesA facilities={facilities} />
+          image4={require('../../../../../assets/CustomButtonJ/apartment.png')}
+          title4="Apartment"
+          onPress4={() => { navigation.navigate('FormScreenJ') }}
 
-          {/* Gallery Section */}
-          <Header2A title1="Julusmita's gallery" title2="" />
-          <CustomGalleryJ />
+        />
 
-          {/* Button Section */}
-          <CustomButtonJ
-            image1={require('../../../../../assets/correct.png')}
-            title1="Card"
-            onPress={() => { navigation.navigate('TestScreen') }}
-            image2={require('../../../../../assets/house.png')}
-            image3={require('../../../../../assets/villa.png')}
-            image4={require('../../../../../assets/apartment.png')}
-            title2="House"
-            title3="Villa"
-            title4="Apartment"
-          />
-
-          {/* Products Section */}
-          <Header2A title1="Julusmita's Products" title2="" />
-          <CustomRecommendationImageJ />
-          </ScrollView>
-   </View>
+        <CustomRecommendationImageJ />
+       
+       
+        <CustomFilterJ/>
         
-     
+
+      </ScrollView>
+    </View>
+
   );
 };
 
@@ -218,6 +225,7 @@ const styles = StyleSheet.create({
     width: 24,
     height: 24,
   },
+ 
 });
 
 export default HomeScreen;

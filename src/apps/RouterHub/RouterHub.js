@@ -8,9 +8,15 @@ import FirstCardScreen from '../../libs/screenComponents/sware-home-component/or
 import FlatListScreen from '../../libs/screenComponents/sware-home-component/organisms/FlatListScreen/FlatListScreen';
 import FormScreenA from '../../libs/screenComponents/sware-home-component/organisms/FormScreenA/FormScreenA';
 import HelpCenterScreen from '../../libs/screenComponents/sware-home-component/organisms/HelpCenterScreen/HelpCenterScreen';
-import CustomFormHeader from '../../libs/atoms/CustomFormHeader';
+// import CustomFormHeader from '../../libs/atoms/CustomFormHeader';
 import ChatScreenA from '../../libs/screenComponents/sware-home-component/organisms/ChatSCreenA/ChatScreenA';
 
+import FlatlistJ from '../../libs/screenComponents/sware-home-component/organisms/FlatlistJ/FlatlistJ';
+import CustomFormHeader from '../../libs/atoms/CustomFormHeader';
+import ReviewScreenJ from '../../libs/screenComponents/sware-home-component/organisms/ReviewScreenJ/ReviewScreenJ';
+import ProfileHeaderJ from '../../libs/atoms/ProfileHeaderJ/ProfileHeaderJ';
+import CardscreenJ from '../../libs/screenComponents/sware-home-component/organisms/CardScreenJ/CardscreenJ';
+import FormScreenJ from '../../libs/screenComponents/sware-home-component/organisms/FormScreenJ/FormScreenJ';
 const Stack = createStackNavigator();
 
 const RouterHub = () => {
@@ -22,10 +28,70 @@ const RouterHub = () => {
           component={DrawerRoot}
           options={{ headerShown: false }}
         />
-        <Stack.Screen
-          name="TestScreen"
-          component={TestScreen}
-          options={{ headerShown: false }}
+        <Stack.Screen 
+        name="CardscreenJ" 
+        component={CardscreenJ} 
+        options={(props) => ({
+          headerShown: true,
+          header: () => <ProfileHeaderJ
+          image={require('../../../assets/ReviewScreenJ/leftarrow.png')}
+          title= "CardScreen"
+          imageOne={require('../../../assets/ReviewScreenJ/more.png')}
+          
+          onPressright={() => { navigation.navigate('NotificationPage') }}
+          drawer
+          />,
+        })} 
+        />
+        <Stack.Screen 
+        name="FlatlistJ" 
+        component={FlatlistJ} 
+        options={(props) => ({
+          headerShown: true,
+          header: () => <ProfileHeaderJ
+          image={require('../../../assets/ReviewScreenJ/leftarrow.png')}
+          title= "Flatlist"
+          imageOne={require('../../../assets/ReviewScreenJ/more.png')}
+          
+          onPressright={() => { navigation.navigate('NotificationPage') }}
+          drawer
+          />,
+        })}
+      />
+          <Stack.Screen 
+        name="ReviewScreenJ" 
+        component={ReviewScreenJ}
+        options={(props) => ({
+          headerShown: true,
+          header: () => <ProfileHeaderJ
+          image={require('../../../assets/ReviewScreenJ/leftarrow.png')}
+
+          title= "4.8 (1.275 reviews)"
+          imageOne={require('../../../assets/ReviewScreenJ/more.png')}
+           onPressleft={() => navigation.goBack()}
+          onPressright={() => { navigation.navigate('NotificationPage') }}
+          
+          />,
+        })}
+      
+        />
+
+<Stack.Screen 
+        name="FormScreenJ" 
+        component={FormScreenJ}
+        options={(props) => ({
+          headerShown: true,
+          header: () => <ProfileHeaderJ
+          image={require('../../../assets/ReviewScreenJ/leftarrow.png')}
+
+          title= "4.8 (1.275 reviews)"
+          imageOne={require('../../../assets/ReviewScreenJ/more.png')}
+           onPressleft={() => navigation.goBack()}
+          onPressright={() => { navigation.navigate('NotificationPage') }}
+          
+          />,
+        })}
+      
         />
         <Stack.Screen
           name="EReceiptScreen"
