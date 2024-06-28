@@ -1,13 +1,8 @@
 import { StyleSheet } from 'react-native';
-import { Color, Padding } from "../../../../GlobalStyles";
+import { Border, Color, FontSize, Margin, Padding } from "../../../../GlobalStyles";
 
 const DropdownJstyles = StyleSheet.create({
-    container: {
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-    
-      },
+   
       picker: {
         height: 50,
         width: 90,
@@ -20,21 +15,21 @@ const DropdownJstyles = StyleSheet.create({
     
       },
       title: {
-        fontSize: 18,
-        marginBottom: 10,
+        fontSize: FontSize.size_lg,
+        marginBottom: Margin.m_3xs,
         
       },
       input: {
         flexDirection: 'row',
         borderWidth: 1,
-        borderRadius: 20,
-        marginBottom: 25,
-        paddingHorizontal: 10,
+        borderRadius: Border.br_xl,
+        marginBottom:  Margin.m_5xl,
+        paddingHorizontal: Padding.p_3xs,
         borderColor: '#e5e4e2',
         alignItems: 'center',
         height: 60,
         width: 90,
-        marginLeft: 5,
+        marginLeft: Margin.m_8xs,
       },
 });
 

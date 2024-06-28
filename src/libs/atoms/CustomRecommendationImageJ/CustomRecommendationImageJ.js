@@ -6,7 +6,7 @@ import CssJ from '../CommonCss/CssJ';
 const images = [
   {
     id: '1',
-    src: require('../../../../assets/lucky.jpg'),
+    src: require('../../../../assets/CustomRecommendationImageJ/lucky.jpg'),
     rating: 4.8,
     title: 'Lucky Lake \nApartments',
     subtitle: 'Beijing, China',
@@ -15,7 +15,7 @@ const images = [
   },
   {
     id: '2',
-    src: require('../../../../assets/HomeAway.jpg'),
+    src: require('../../../../assets/CustomRecommendationImageJ/HomeAway.jpg'),
     rating: 4.6,
     title: 'Alpha Housing \nHome',
     subtitle: 'New Delhi, India',
@@ -24,7 +24,7 @@ const images = [
   },
   {
     id: '3',
-    src: require('../../../../assets/tranquil.jpg'),
+    src: require('../../../../assets/CustomRecommendationImageJ/tranquil.jpg'),
     title: 'Tranquil Tavern \nApartments',
     rating: 4.7,
     subtitle: 'New York, US',
@@ -33,7 +33,7 @@ const images = [
   },
   {
     id: '4',
-    src: require('../../../../assets/tropicana.webp'),
+    src: require('../../../../assets/CustomRecommendationImageJ/tropicana.webp'),
     title: 'Tropicana Del \nNorte',
     rating: 4.9,
     subtitle: 'Tokyo, Japan',
@@ -42,7 +42,7 @@ const images = [
   },
   {
     id: '4',
-    src: require('../../../../assets/raid.jpg'),
+    src: require('../../../../assets/CustomRecommendationImageJ/raid.jpg'),
     title: 'Secluded Beach \nHouse',
     rating: 4.8,
     subtitle: 'Maui, Hawaii',
@@ -51,7 +51,7 @@ const images = [
   },
   {
     id: '4',
-    src: require('../../../../assets/riadimage.jpg'),
+    src: require('../../../../assets/CustomRecommendationImageJ/riadimage.jpg'),
     title: 'Historic City \nMansion',
     rating: 4.7,
     subtitle: 'Paris, France',
@@ -60,7 +60,7 @@ const images = [
   },
   {
     id: '4',
-    src: require('../../../../assets/altair.jpg'),
+    src: require('../../../../assets/CustomRecommendationImageJ/altair.jpg'),
     title: 'Serenity Forest \nCabin',
     rating: 4.7,
     subtitle: 'Black forest, Germany',
@@ -69,7 +69,7 @@ const images = [
   },
   {
     id: '4',
-    src: require('../../../../assets/scenic.jpg'),
+    src: require('../../../../assets/CustomRecommendationImageJ/scenic.jpg'),
     title: 'Scenic Mountain \nlodge',
     rating: 4.8,
     subtitle: 'Banff, Canada',
@@ -100,7 +100,7 @@ const CustomRecommendationImageJ = () => {
           <View style={CustomRecommendationImageJstyles.footer}>
             <Text style={CustomRecommendationImageJstyles.dollar}>{item.dollar}</Text>
             <Text style={CustomRecommendationImageJstyles.night}>{item.night}</Text>
-            <Image source={require('../../../../assets/blueherart.png')} style={CustomRecommendationImageJstyles.heart} />
+            <Image source={require('../../../../assets/CustomRecommendationImageJ/blueherart.png')} style={CustomRecommendationImageJstyles.heart} />
           </View>
         </View>
       )}

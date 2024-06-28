@@ -1,46 +1,48 @@
 import { StyleSheet } from 'react-native';
-import { Color, Padding } from "../../../../../../GlobalStyles";
+import { Border, Color, FontSize, Margin, Padding } from "../../../../../../GlobalStyles";
 
 const FlatlistJstyles = StyleSheet.create({
-    container: {
-        flex: 1,
-        marginTop: 50,
-       
-      },
+    
       item: {
         backgroundColor: 'whitesmoke',
-        padding: 10,
-        marginVertical: 8,
+        padding: Padding.p_3xs,
+        marginVertical: Margin. m_5xs,
+        marginHorizontal: Margin.m_3xs,
         flexDirection: 'row',
         alignItems: 'center',
-        borderRadius: 20,
+        borderRadius: Border.br_xl,
       },
       image: {
-        width: 70,
-        height: 70,
-        borderRadius: 15,
-        backgroundColor: "#ffebcd"
+        width: 65,
+        height: 65,
+        borderRadius: Border.br_4xs,
+        backgroundColor: Color.whitesmoke_100
         
       },
       title: {
-        fontSize: 19,
+        fontSize: FontSize. size_lg,
         fontWeight: "bold",
-        paddingLeft: 10,
+        paddingLeft: Padding.p_3xs,
       },
       header: {
         fontWeight: "bold",
-        fontSize: 25,
+        fontSize: FontSize.size_5xs,
+        paddingLeft: Padding.p_xl,
+        paddingTop: Padding.p_3xs,
+        paddingBottom: Padding.p_8xs,
       },
       titleitem :{
         flexDirection: 'column',
       },
       subtitle:{
         color: '#696969',
-        fontSize: 14,
-        paddingLeft: 10,
+        fontSize: FontSize.size_sm,
+        paddingLeft: Padding.p_3xs,
       },
       time: {
         paddingBottom: 45,
+       justifyContent: "flex-end",
+       alignItems: "flex-end"
       },
 });
 

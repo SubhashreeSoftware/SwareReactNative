@@ -3,14 +3,13 @@ import { View, Text, TouchableOpacity, StyleSheet, Image, ScrollView} from 'reac
 import CustomButtonJstyles from './CustomButtonJ.styles';
 import CssJ from '../CommonCss/CssJ';
 
-const CustomButtonJ = ({ onPress,image1,image2,image3,image4, title1,title2,title3,title4 }) => {
+const CustomButtonJ = ({ onPress1, onPress2, onPress3,onPress4, image1,image2,image3,image4, title1,title2,title3,title4 }) => {
   return (
     <ScrollView
     horizontal
     >
 
-    <TouchableOpacity onPress={onPress} style={CssJ.container}>
-    
+    <TouchableOpacity onPress={onPress1} style={CssJ.container}>
       <View style={CustomButtonJstyles.button}>
         <Image
           source={image1}
@@ -19,7 +18,8 @@ const CustomButtonJ = ({ onPress,image1,image2,image3,image4, title1,title2,titl
         <Text style={CustomButtonJstyles.buttonText}>{title1}</Text>
       </View>
       </TouchableOpacity>
-
+    
+      <TouchableOpacity onPress={onPress2} style={CssJ.container}>
       <View style={[CustomButtonJstyles.button,CustomButtonJstyles.buttonTwo]}>
       <Image
           source={image2}
@@ -27,7 +27,9 @@ const CustomButtonJ = ({ onPress,image1,image2,image3,image4, title1,title2,titl
         />
         <Text style={CustomButtonJstyles.buttonTexttwo}>{title2}</Text>
       </View>
+      </TouchableOpacity>
 
+      <TouchableOpacity onPress={onPress3} style={CssJ.container}>
       <View style={[CustomButtonJstyles.button,CustomButtonJstyles.buttonTwo]}>
         <Image
           source={image3}
@@ -35,14 +37,18 @@ const CustomButtonJ = ({ onPress,image1,image2,image3,image4, title1,title2,titl
         />
         <Text style={CustomButtonJstyles.buttonTexttwo}>{title3}</Text>
       </View>
-
-      <View style={[CustomButtonJstyles.button,CustomButtonJstyles.buttonTwo]}>
+      </TouchableOpacity>
+      
+      <TouchableOpacity onPress={onPress4} style={CssJ.container}>
+      <View style={[CustomButtonJstyles.button,CustomButtonJstyles.buttonTwo,CustomButtonJstyles.buttonThree]}>
         <Image
           source={image4}
           style={CustomButtonJstyles.image}
         />
         <Text style={CustomButtonJstyles.buttonTexttwo}>{title4}</Text>
       </View>
+      </TouchableOpacity>
+      
     </ScrollView>
 
   );

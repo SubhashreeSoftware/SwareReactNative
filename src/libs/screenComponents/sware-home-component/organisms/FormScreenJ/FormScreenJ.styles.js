@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { Border, Color, Padding } from "../../../../../../GlobalStyles";
+import { Border, Color, FontSize, Margin, Padding } from "../../../../../../GlobalStyles";
 
 const FormScreenJstyles = StyleSheet.create({
     boxInput:{
@@ -7,17 +7,16 @@ const FormScreenJstyles = StyleSheet.create({
         height: 650,
         justifyContent: 'center',
         alignItems: 'center',
-        borderWidth: 0,
         borderRadius: Border.br_xl,
         elevation: 5,  
-        paddingHorizontal: 20,
-        marginTop: 10,
+        paddingHorizontal: Padding.p_xl,
+        marginTop: Margin.m_3xs,
         backgroundColor: Color.white,
 
     },
     text: {
-        fontSize: 25,
-        marginTop: 20,
+        fontSize: FontSize.size_5xl,
+        marginTop: FontSize.size_xl,
         color: '#f08080',
 
     },

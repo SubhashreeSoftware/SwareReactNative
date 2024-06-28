@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import DropdownJstyles from './DropdownJ.styles';
-
+import CssJ from '../CommonCss/CssJ';
 const generateRange = (start, end) => {
   const range = [];
   for (let i = start; i <= end; i++) {
@@ -34,7 +34,7 @@ const DropdownJ = () => {
   const [selectedYear, setSelectedYear] = useState(years[0]);
 
   return (
-    <View style={DropdownJstyles.container}>
+    <View style={CssJ.container}>
       <View style={DropdownJstyles.input}> 
         <Picker
           selectedValue={selectedDay}
