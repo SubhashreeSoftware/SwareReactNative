@@ -65,8 +65,8 @@ const CustomFeatureAstyles = StyleSheet.create({
     flex: 1,  
   },
   heartIcon: {
-    width: 20,
-    height: 20,
+    width: 30,
+    height: 30,
     marginLeft: Margin.m_8xs,
   },
     }); 
