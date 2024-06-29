@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { Color, Padding } from "../../../../GlobalStyles";
+import { Border, Color, FontSize, Margin, Padding } from "../../../../GlobalStyles";
 
 const CheckboxJstyles = StyleSheet.create({
     checkboxContainer: {
@@ -10,25 +10,25 @@ const CheckboxJstyles = StyleSheet.create({
       checkbox: {
         height: 20,
         width: 20,
-        borderRadius: 15,
+        borderRadius: Border. m_xl,
         borderWidth: 2,
-        borderColor: '#007AFF',
+        borderColor: Color.primarycolor,
         justifyContent: 'center',
         alignItems: 'center',
-        marginRight:10,
+        marginRight: Margin.m_3xs,
       },
       checkedCheckbox: {
-        backgroundColor: 'white',
+        backgroundColor: Color.white,
       },
       checkmark: {
-        color: '#007AFF',
-        fontSize: 11,
+        color: Color.primarycolor,
+        fontSize: FontSize.size_xs,
         fontWeight: 'bold',
       },
       label: {
         fontSize: 16,
-        color: '#007AFF',
-        marginRight: 30,
+        color: 'Color.primarycolor',
+        marginRight: Margin.m_11xl,
       },
 });
 

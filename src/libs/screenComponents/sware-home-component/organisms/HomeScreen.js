@@ -1,31 +1,42 @@
-import React from 'react';
-import { View, Text, StyleSheet, FlatList, ScrollView, Image } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, ScrollView, Image, FlatList } from 'react-native';
 import FormScreenA from './FormScreenA/FormScreenA';
 import CardScreenA from './CardScreenA/CardScreenA';
 import CamCardA from './CamCardA/CamCardA';
 import PropertiesA from './PropertiesA/PropertiesA';
-import FlatListA from './FlatListA/FlatListA';
+import FlatListA from './FlatListA/FlatListA'; // Import FlatListA component
 import CustomFeatureA from '../../../atoms/CustomFeatureA/CustomFeatureA';
 import CustomFacilitiesA from '../../../atoms/CustomFacilitiesA/CustomFacilitiesA';
 import CustomSearchBarA from '../../../atoms/CustomSearchBarA/CustomSearchBarA';
-
-
-// Profile image and bell icon for Header@A
-const profileImage = require('../../../../../assets/brookly.png');
-const bellIcon = require('../../../../../assets/notification.png');
-
-// Practise section
+import { useNavigation } from '@react-navigation/native';
+import Header2A from '../../../atoms/Header2A/Header2A';
+import FormScreenJ from './FormScreenJ/FormScreenJ';
+import ProfileHeaderJ from '../../../atoms/ProfileHeaderJ/ProfileHeaderJ';
+import CustomFilterJ from '../../../atoms/CustomFilterJ/CustomFilterJ';
 import CardscreenJ from './CardScreenJ/CardscreenJ';
 import FlatlistJ from './FlatlistJ/FlatlistJ';
 import CustomGalleryJ from '../../../atoms/CustomGalleryJ/CustomGalleryJ';
 import CustomButtonJ from '../../../atoms/CustomButtonJ/CustomButtonJ';
 import CustomRecommendationImageJ from '../../../atoms/CustomRecommendationImageJ/CustomRecommendationImageJ';
-import { useNavigation } from '@react-navigation/native';
-import Header2A from '../../../atoms/Header2A/Header2A';
+
+// Profile image and bell icon for Header@A
+const profileImage = require('../../../../../assets/brookly.png');
+const bellIcon = require('../../../../../assets/Header/notification.png');
+
 
 const HomeScreen = () => {
   const navigation = useNavigation();
+  const [modalVisible, setModalVisible] = useState(false);
 
+  const handleOpenModal = () => {
+    setModalVisible(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalVisible(false);
+  };
+
+  // Data array for FlatList
   const data = [
     { id: 'formA', component: <FormScreenA /> },
     { id: 'cardA', component: <CardScreenA /> },
@@ -33,73 +44,88 @@ const HomeScreen = () => {
     { id: 'propertiesTheme', component: <PropertiesA title="Theme" content="Theme plays the main role in designing." /> },
     { id: 'propertiesColor', component: <PropertiesA title="Color" content="Makes things attractive." /> },
     { id: 'propertiesImages', component: <PropertiesA title="Images" content="Makes people emotionally involved." /> },
-    { id: 'flatListA', component: <FlatListA /> },
-    // { id: 'formJ', component: <FormScreenJ /> },
+    { id: 'flatListA', component: <FlatListA /> }, // Add FlatListA component here
   ];
 
-
-  // Rendered feature cards
+  // Render item function for FlatList
   const renderItem = ({ item }) => (
     <View style={styles.itemContainer}>
       {item.component}
     </View>
   );
 
-  //Feature cards
-
+  // Feature cards data
   const properties = [
     {
-      id: '1',
+      id: 'img1',
       name: 'Modernica Apartments',
       location: 'New York, US',
       price: '$29 / Night',
       rating: 4.8,
-      backgroundImage: require('../../../../../assets/Image1.jpg'),
+      backgroundImage: require('../../../../../assets/Features/Image1.jpg'),
     },
     {
-      id: '2',
+      id: 'img2',
       name: 'Meridian Suites',
       location: 'Paris, France',
       price: '$32 / night',
       rating: 4.6,
-      backgroundImage: require('../../../../../assets/Image2.jpg'),
+      backgroundImage: require('../../../../../assets/Features/Image2.jpg'),
     },
     {
-      id: '3',
+      id: 'img3',
       name: 'Oceanview Villas',
       location: 'Malibu, US',
       price: '$45 / night',
       rating: 4.9,
-      backgroundImage: require('../../../../../assets/Image3.jpg'),
+      backgroundImage: require('../../../../../assets/Features/Image3.jpg'),
     },
     {
-      id: '4',
+      id: 'img4',
       name: 'Sunset Retreat',
       location: 'Santorini, Greece',
       price: '$50 / night',
       rating: 4.7,
-      backgroundImage: require('../../../../../assets/Image4.jpg'),
+      backgroundImage: require('../../../../../assets/Features/Image4.jpg'),
     },
     {
-      id: '5',
+      id: 'img5',
       name: 'Cityscape Condo',
       location: 'Tokyo, Japan',
       price: '$40 / night',
       rating: 4.5,
-      backgroundImage: require('../../../../../assets/Image5.jpg'),
+      backgroundImage: require('../../../../../assets/Features/Image5.jpg'),
     },
   ];
 
-  // Facilities section
+  // Facilities section data
   const facilities = [
-    { name: 'First Card', icon: require('../../../../../assets/car-parking.png') },
-    { name: 'FlatList', icon: require('../../../../../assets/swim.png') },
-    { name: 'Form', icon: require('../../../../../assets/dumbbell.png') },
-    { name: 'E-receipt', icon: require('../../../../../assets/cutlery.png') },
-    { name: 'Help Center', icon: require('../../../../../assets/connection.png') },
-    { name: 'Pet Center', icon: require('../../../../../assets/welfare.png') },
-    { name: 'Sport Center', icon: require('../../../../../assets/exercise.png') },
-    { name: 'Laundry', icon: require('../../../../../assets/laundry-machine.png') },
+    {
+      name: 'First Card',
+      icon: require('../../../../../assets/Facilities/parked-car.png'),
+      onPress: 'FirstCardScreen'
+    },
+    {
+      name: 'FlatList',
+      icon: require('../../../../../assets/Facilities/swim.png'),
+      onPress: 'FlatListScreen'
+    },
+    { name: 'Form', 
+      icon: require('../../../../../assets/Facilities/weightlifting.png'),
+      onPress: 'FormScreenA'
+     },
+    {
+      name: 'E-receipt',
+      icon: require('../../../../../assets/Facilities/serving-dish.png'),
+      onPress: 'EReceiptScreen'
+    },
+    { name: 'Help Center', 
+      icon: require('../../../../../assets/Facilities/wifi-signal.png'),
+      onPress: 'HelpCenterScreen'
+     },
+    { name: 'Pet Center', icon: require('../../../../../assets/Facilities/animals.png') },
+    { name: 'Sport Center', icon: require('../../../../../assets/Facilities/tennis.png') },
+    { name: 'Laundry', icon: require('../../../../../assets/Facilities/washing-machine.png') },
   ];
 
   return (
@@ -122,54 +148,47 @@ const HomeScreen = () => {
         <CustomFeatureA properties={properties} />
         <Header2A title1="Arpita's Components" title2="" />
         <CustomFacilitiesA facilities={facilities} />
-        <Header2A title1="Julusmita's gallery" title2="" />
-
+        <Header2A title1="Gallery" title2="See All" />
         <CustomGalleryJ />
-
+        <Header2A title1="Our Recommendation" title2="See All" />
         <CustomButtonJ
-          image1={require('../../../../../assets/correct.png')}
+          image1={require('../../../../../assets/CustomButtonJ/correct.png')}
           title1="Card"
-          onPress={() => { navigation.navigate('TestScreen') }}
-          image2={require('../../../../../assets/house.png')}
-          image3={require('../../../../../assets/villa.png')}
-          image4={require('../../../../../assets/apartment.png')}
-          title2="House"
-          title3="Villa"
+          onPress1={() => { navigation.navigate('CardscreenJ') }}
+          image2={require('../../../../../assets/CustomButtonJ/house.png')}
+          title2="flatlist"
+          onPress2={() => { navigation.navigate('FlatlistJ') }}
+
+          title3="Review"
+          image3={require('../../../../../assets/CustomButtonJ/villa.png')}
+          onPress3={() => { navigation.navigate('ReviewScreenJ') }}
+
+
+          image4={require('../../../../../assets/CustomButtonJ/apartment.png')}
           title4="Apartment"
+          onPress4={() => { navigation.navigate('FormScreenJ') }}
+
         />
-        <Header2A title1="Julusmita's Products" title2="" />
 
         <CustomRecommendationImageJ />
-        {/* <FormScreenA />
-    <CardScreenA />
-    <CamCardA />
-    <FormScreenJ />
-    <CardscreenJ/>
-    <FlatLists
-      data={data}
-      renderItem={renderItem}
-      keyExtractor={item => item.id}
-      contentContainerStyle={styles.container}
-    />
-    <FlatlistJ/> */}
+       
+       
+        <CustomFilterJ/>
+        
+
       </ScrollView>
     </View>
 
   );
 };
 
-//Styles for Homescreen
-
+// Styles for HomeScreen
 const styles = StyleSheet.create({
   scrollContainer: {
-    // flexGrow: 1,
     padding: 5,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#ffffff',
-  },
-  container: {
-    flexGrow: 1,
   },
   itemContainer: {
     marginBottom: 15,
@@ -206,6 +225,7 @@ const styles = StyleSheet.create({
     width: 24,
     height: 24,
   },
+ 
 });
 
 export default HomeScreen;

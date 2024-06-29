@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { Border, FontSize, Margin, Padding } from '../../../../../../GlobalStyles';
 
 const CardScreenAstyles = StyleSheet.create({
     container: {
@@ -10,23 +11,23 @@ const CardScreenAstyles = StyleSheet.create({
       input: {
         borderWidth: 1,
         borderColor: '#ddd',
-        padding: 15,
-        marginBottom: 10,
-        borderRadius: 5,
+        padding: Padding.p_mini,
+        marginBottom: Margin.m_3xs,
+        borderRadius: Border.br_8xs,
         backgroundColor: '#f9f9f9',
       },
       row: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'flex-start',
-        marginBottom: 10,
+        marginBottom: Margin.m_3xs,
       },
       pickerContainer: {
         flex: 1,
-        marginRight: 10,
+        marginRight: Margin.m_3xs,
         borderWidth: 1,
         borderColor: '#ddd',
-        borderRadius: 5,
+        borderRadius: Border.br_8xs,
         backgroundColor: '#f9f9f9',
         justifyContent: 'center',
       },
@@ -36,28 +37,28 @@ const CardScreenAstyles = StyleSheet.create({
       },
       cvvInput: {
         flex: 1,
-        marginLeft: 10,
+        marginLeft: Margin.m_3xs,
       },
       nextButton: {
         backgroundColor: '#007BFF',
-        padding: 15,
-        borderRadius: 5,
+        padding: Padding.p_mini,
+        borderRadius: Border.br_8xs,
         alignItems: 'center',
-        marginBottom: 10,
+        marginBottom: Margin.m_3xs,
       },
       nextButtonText: {
         color: '#fff',
-        fontSize: 20,
+        fontSize: FontSize.size_xl,
       },
       backButton: {
-        padding: 15,
-        borderRadius: 5,
+        padding: Padding.p_mini,
+        borderRadius: Border.br_8xs,
         alignItems: 'center',
         borderColor: '#ddd',
         borderWidth: 1,
       },
       backButtonText: {
-        fontSize: 20,
+        fontSize: FontSize.size_xl,
         color: '#007BFF',
       },
 });

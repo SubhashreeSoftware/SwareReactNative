@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { Color, FontSize, Padding, Margin } from '../../../../../../GlobalStyles';
 
 const CamCardAstyles = StyleSheet.create({
     container: {
@@ -10,11 +11,11 @@ const CamCardAstyles = StyleSheet.create({
       card: {
         backgroundColor: '#f0f4f8',
         borderRadius: 16,
-        padding: 20,
+        padding: Padding.m_xl,
         alignItems: 'center',
         width: '90%',
         height: 400,
-        shadowColor: '#000',
+        shadowColor: Color.black,
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.8,
         shadowRadius: 2,
@@ -23,7 +24,7 @@ const CamCardAstyles = StyleSheet.create({
     image: {
         width: 200,
         height: 200,
-        marginBottom: 20,
+        marginBottom:  Margin.m_xl,
         borderRadius: 16,
     },
     infoContainer: {
@@ -33,13 +34,13 @@ const CamCardAstyles = StyleSheet.create({
         width: '100%',
         paddingTop: 70,
         bottom: 20,
-        paddingHorizontal: 20,
+        paddingHorizontal:  Padding.p_xl,
     },
     textContainer: {
         flex: 1,
     },
     title: {
-        fontSize: 24,
+        fontSize: FontSize.size_5xl,
         fontWeight: 'bold',
         textAlign: 'left',
     },
@@ -49,13 +50,13 @@ const CamCardAstyles = StyleSheet.create({
         textAlign: 'left',
     },
     button: {
-        backgroundColor: '#fff',
+        backgroundColor: Color.white,
         borderRadius: 16,
         width: 50,
         height: 50,
         alignItems: 'center',
         justifyContent: 'center',
-        shadowColor: '#000',
+        shadowColor: Color.black,
         shadowOffset: { width: 0, height: 1 },
         shadowOpacity: 0.3,
         shadowRadius: 1,

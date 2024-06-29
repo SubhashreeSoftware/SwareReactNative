@@ -9,15 +9,15 @@ const CustomGalleryJ = ({image1}) => {
         <View style={[CssJ.container,{justifyContent: "flex-start", alignSelf: "flex-start"}]}>
             <View style={CustomGalleryJstyles.scrollContainer}>
                 <Image
-                    source={require('../../../../assets/whiteBuilding.jpg')}
+                    source={require('../../../../assets/CustomGalleryJ/whiteBuilding.jpg')}
                     style={CustomGalleryJstyles.image}
                 />
                 <Image
-                    source={require('../../../../assets/flat.jpg')}
+                    source={require('../../../../assets/CustomGalleryJ/flat.jpg')}
                     style={CustomGalleryJstyles.image}
                 />
                 <ImageBackground
-                    source={require('../../../../assets/chair.jpg')}
+                    source={require('../../../../assets/CustomGalleryJ/chair.jpg')}
                     style={CustomGalleryJstyles.imageBackground}
                    
                 >

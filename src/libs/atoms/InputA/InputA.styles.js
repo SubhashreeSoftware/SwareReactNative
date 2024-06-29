@@ -1,22 +1,21 @@
 import { StyleSheet } from 'react-native';
+import { Border, FontSize, Margin, Padding } from '../../../../GlobalStyles';
 
 const InputAstyles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        // backgroundColor: Color.white,
-      },
-      label: {
-        fontSize: 16,
-        marginBottom: 8,
-      },
-      input: {
-        height: 40,
-        borderWidth: 1,
-        padding: 10,
-      },
+  container: {
+    width: '100%',
+    marginBottom: Margin.m_xl,
+  },
+  label: {
+    fontSize: FontSize.size_base,
+    marginBottom: Margin.m_5xs,
+  },
+  input: {
+    height: 40,
+    borderWidth: Border.br_11xs,
+    borderColor: 'gray',
+    padding: Padding.p_3xs,
+  },
 });
-
 
 export default InputAstyles;

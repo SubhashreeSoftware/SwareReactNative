@@ -1,20 +1,21 @@
 import { StyleSheet } from 'react-native';
+import { Border, Color, Padding, Margin } from '../../../../GlobalStyles';
 
 const TextAreaAstyles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    // backgroundColor: Color.white,
+    width: '100%',
+    marginBottom:  Margin.m_3xs,
   },
-      textarea: {
-        height: 100,
-        borderColor: 'gray',
-        borderWidth: 1,
-        padding: 10,
-        textAlignVertical: 'top',
-      },
+  textarea: {
+    height: 100,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    borderRadius: Border.br_8xs,
+    padding:  Padding.p_3xs,
+    backgroundColor: Color.white,
+    textAlignVertical: 'top',
+    color: Color.black,
+  },
 });
-
 
 export default TextAreaAstyles;

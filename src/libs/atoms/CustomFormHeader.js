@@ -1,8 +1,6 @@
 import React, { memo } from "react";
 import {
   View,
-  StyleProp,
-  ViewStyle,
   Pressable,
   StyleSheet,
   Text,
@@ -12,25 +10,27 @@ import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 import { Color, FontFamily, FontSize, Padding } from "../../../GlobalStyles";
 
+const CustomFormHeader = memo(({ style, imageleft, imageright, heading, onPressleft, onPressright, drawer, navigation, }) => {
+  const nav = navigation || useNavigation();
 
-const CustomFormHeader = memo(({ style, imageleft, imageright,heading,onPressright,drawer  }) => {
+  const handleBack = () => {
+    if (onPressleft) {
+      onPressleft();
+    } else {
+      nav.goBack();
+    }
+  };
 
-  const navigation = useNavigation();
-  
- const  handleBack =()=>{
-  navigation.goBack()
- }
-
-const  handleDrawer =()=>{
- navigation.toggleDrawer()
-}
+  const handleDrawer = () => {
+    nav.toggleDrawer();
+  };
 
   return (
-    <SafeAreaView style={styles.group4}>
+    <SafeAreaView style={[styles.group4, style]}>
       <View style={styles.viewview}>
         <Pressable
           style={styles.iconLayout}
-          onPress={drawer?handleDrawer:handleBack}
+          onPress={drawer ? handleDrawer : handleBack}
         >
           <Image
             style={styles.icon1}
@@ -45,15 +45,15 @@ const  handleDrawer =()=>{
           style={styles.iconLayout}
           onPress={onPressright}
         >
-        <View style={[styles.iconKebab, styles.iconLayout]}>
-          <View style={styles.ellipseParent}>
-            <Image
-              style={[styles.frameItem, styles.frameLayout]}
-              contentFit="cover"
-              source={imageright}
-            />
+          <View style={[styles.iconKebab, styles.iconLayout]}>
+            <View style={styles.ellipseParent}>
+              <Image
+                style={[styles.frameItem, styles.frameLayout]}
+                contentFit="cover"
+                source={imageright}
+              />
+            </View>
           </View>
-        </View>
         </Pressable>
       </View>
     </SafeAreaView>
@@ -126,8 +126,6 @@ const styles = StyleSheet.create({
   },
   ellipseParent: {
     position: "absolute",
- 
-
   },
   iconKebab: {
     overflow: "hidden",
@@ -140,8 +138,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignSelf: "stretch",
     backgroundColor: "white",
-    borderBottomWidth:0.2,
-    borderColor:"#fdee12"
+    borderBottomWidth: 0.2,
+    borderColor: "#fdee12",
   },
 });
 

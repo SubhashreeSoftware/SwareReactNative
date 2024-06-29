@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import CssA from '../../../../atoms/CommonCss/CSSA'
+import CssA from '../../../../atoms/CommonCss/CssA'
 
 export default function TestScreen() {
   return (

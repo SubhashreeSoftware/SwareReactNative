@@ -1,30 +1,29 @@
 import { StyleSheet } from 'react-native';
-import { Border, Color, FontFamily, Padding } from "../../../../GlobalStyles";
+import { Border, Color, FontFamily, Margin, Padding } from "../../../../GlobalStyles";
 
 const ButtonJstyles = StyleSheet.create({
     buttonContainer: {
-        justifyContent: 'center',
-        alignItems: 'center',
+        flexDirection:"row"
       },
       button: {
-        height: 55,
-        width: 280,
-        borderRadius: Border.br_5xl,
-        backgroundColor: '#007AFF',
+        height: 50,
+        width: 155,
+        borderRadius: Border. br_6xl,
+        backgroundColor: Color.primarycolor,
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop:20,
+        marginTop: Margin. m_3xs,
+        marginHorizontal: 12,
       },
       buttonTwo: {
-        height: 55,
-        width: 280,
-        borderRadius: Border.br_5xl, // Half of the height and width to make it round
-        backgroundColor: 'white',
+        height: 50,
+        width: 155,
+        borderRadius: Border. br_6xl, // Half of the height and width to make it round
+        backgroundColor: '#e8f4f8',
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop:20,
-        borderWidth:1,
-        borderColor: '#e5e4e2',
+        marginTop: Margin. m_3xs,
+        marginHorizontal: 20,
       },
     
       buttonText: {

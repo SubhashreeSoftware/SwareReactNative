@@ -25,9 +25,13 @@ export const FontSize = {
   size_5xl: 24,
   size_17xl: 36,
   size_3xs: 10,
+  size_4xs: 30,
+  size_5xs: 22,
+  size_6xs: 19,
 };
 /* Colors */
 export const Color = {
+  primaryBlue: "#1A6EF0",
   lightyellow: "#fdd10059",
   yellow: "#ffcd4e",
   yellow100: "#AA8100",
@@ -55,6 +59,7 @@ export const Color = {
   darkorange: "#ffd100",
   gray100: "#f5f5f5",
   gray300: "#d4d4d4",
+  primarycolor: "#007AFF",
 };
 /* Paddings */
 export const Padding = {
@@ -111,6 +116,8 @@ export const Margin = {
   m_10xs: 3,
   m_2xs: 11,
   m_8xs: 5,
+  m_12xs: 25,
+  m_13xs: 27,
 };
 /* border radiuses */
 export const Border = {
@@ -124,7 +131,13 @@ export const Border = {
   br_xl: 20,
   br_7xs: 6,
   br_5xl: 24,
+  br_6xl: 25,
   br_3xs: 10,
   br_41xl: 60,
   br_31xl: 50,
+  br_4xs: 15,
+
 };
+
+
+

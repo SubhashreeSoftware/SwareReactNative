@@ -1,17 +1,30 @@
 import { StyleSheet } from 'react-native';
-
+import { Border, FontSize, Padding, Margin } from '../../../../GlobalStyles';
 
 const SelectFieldAstyles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    // backgroundColor: Color.white,
+    width: '100%',
+    marginBottom:  Margin.m_3xs,
+    padding:  Padding.p_3xs,
+    backgroundColor: 'white',
+    borderRadius: Border.br_8xs,
+    borderWidth: 1,
+    borderColor: '#ccc',
   },
-      checkbox: {
-        alignSelf: 'center',
-      },
+  label: {
+    fontSize: FontSize.size_base,
+    fontWeight: 'bold',
+    color: 'black',
+    marginBottom:  Margin.m_3xs,
+  },
+  checkboxContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  checkbox: {
+    flex: 1,
+    marginRight:  Margin.m_3xs,
+  },
 });
-
 
 export default SelectFieldAstyles;

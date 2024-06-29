@@ -6,12 +6,13 @@ import CssJ from '../CommonCss/CssJ';
 const ButtonJ = ({ onPress, title }) => {
   return (
     <TouchableOpacity onPress={onPress} style={ButtonJstyles.buttonContainer}>
-       <View style={ButtonJstyles.button}>
-        <Text style={ButtonJstyles.buttonText}>{title}Next</Text>
-      </View>   
       <View style={ButtonJstyles.buttonTwo}>
         <Text style={ButtonJstyles.buttonTexttwo}>{title}Back</Text>
-      </View>    
+      </View>
+       <View style={ButtonJstyles.button}>
+        <Text style={ButtonJstyles.buttonText}>{title}Apply</Text>
+      </View>   
+          
     </TouchableOpacity>
   );
 };

@@ -1,45 +1,43 @@
 import { StyleSheet } from 'react-native';
-import { Color, Padding } from "../../../../GlobalStyles";
+import { Border, Color, FontSize, Margin, Padding } from "../../../../GlobalStyles";
 
 const CustomButtonJstyles = StyleSheet.create({
-    container: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        padding: 15,
-        
-      },
+    
       button: {
-        height: 46,
+        height: 43,
         width: 90,
-        borderRadius: 25,
-        backgroundColor: '#007AFF',
+        borderRadius: Border.br_6xl,
+        backgroundColor: Color.primarycolor,
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 30,
         flexDirection: 'row',
-    
+        marginBottom: Margin.m_3xs,
       },
       buttonTwo: {
-        backgroundColor: 'white',
+        backgroundColor: Color.white,
         borderWidth: 2,
-        borderColor: '#007bff',
+        borderColor: Color.primarycolor,
         marginHorizontal: 3, 
+      },
+      buttonThree: {
+       width: 120,
       },
      
       buttonText: {
-        color: 'white',
-        fontSize: 15,
-        paddingLeft: 10,
+        color: Color.white,
+        fontSize: FontSize.size_mini,
+        paddingLeft: Padding.p_8xs,
       },
       buttonTexttwo: {
-        color: '#007bff',
-        fontSize: 15,
+        color: Color.primarycolor,
+        fontSize: FontSize.size_mini,
+        paddingLeft: Padding.p_8xs,
+
       },
       image: {
         height:20,
         width: 20,
-        // marginRight: 5,
+        
       }
      
 });

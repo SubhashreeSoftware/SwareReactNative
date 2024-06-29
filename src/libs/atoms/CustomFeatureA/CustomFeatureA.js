@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, ImageBackground, StyleSheet, FlatList, Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import Header2A from '../Header2A/Header2A';
 import CustomFeatureAstyles from './CustomFeatureA.styles'; 
 
 const FeatureCard = ({ name, location, price, rating, backgroundImage }) => (
@@ -20,7 +19,7 @@ const FeatureCard = ({ name, location, price, rating, backgroundImage }) => (
         <Text style={CustomFeatureAstyles.location}>{location}</Text>
         <View style={CustomFeatureAstyles.priceContainer}>
           <Text style={CustomFeatureAstyles.price}>{price}</Text>
-          <Image source={require('../../../../assets/heart.png')} style={CustomFeatureAstyles.heartIcon} />
+          <Image source={require('../../../../assets/Features/heart.png')} style={CustomFeatureAstyles.heartIcon} />
         </View>
       </View>
     </ImageBackground>

@@ -11,9 +11,9 @@ import FileUploadA from '../../../../atoms/FileUploadA/FileUploadA';
 import SelectFieldA from '../../../../atoms/SelectFieldA/SelectFieldA';
 import FormScreenAstyles from './FormScreenA.styles';
 
-export default function FormScreenA()  {
+export default function FormScreenA() {
   const [selectedValue, setSelectedValue] = useState('option1');
-  const [isChecked, setIsChecked] = useState(false); 
+  const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
@@ -24,11 +24,11 @@ export default function FormScreenA()  {
   };
 
   const dropdownOptions = [
-    { label: 'Male', value: 'option1' },
-    { label: 'Female', value: 'option2' },
-    { label: 'Other', value: 'option3' },
+    { label: 'Java', value: 'java' },
+    { label: 'JavaScript', value: 'javascript' },
+    { label: 'Python', value: 'python' },
+    { label: 'C++', value: 'c++' },
   ];
-  
 
   return (
     <ScrollView contentContainerStyle={FormScreenAstyles.scrollContainer}>
@@ -36,12 +36,8 @@ export default function FormScreenA()  {
       <View style={FormScreenAstyles.formContainer}>
         <InputA />
         <PasswordInputA />
-        <SelectFieldA 
-          options={dropdownOptions} 
-          defaultValue={selectedValue} 
-          onSelect={handleSelect} 
-        />
-        <DropdownA />
+        <SelectFieldA />
+        <DropdownA options={dropdownOptions} onSelect={handleSelect} selectedValue={selectedValue} />
         <FileUploadA />
         <ImageUploadA />
         <TextAreaA />
@@ -50,11 +46,8 @@ export default function FormScreenA()  {
           checked={isChecked}
           onChange={handleCheckboxChange}
         />
-        <SimpleButton />
+        <SimpleButton title="Submit" onPress={() => { console.log("Button Pressed") }} />
       </View>
     </ScrollView>
   );
-};
-
-
-
+}

@@ -9,7 +9,7 @@ const CardscreenJ = () => {
         <View style={CssJ.container}>
             <View style={CardscreenJstyles.boxInput}>
                 <Image
-                    source={require('../../../../../../assets/speaker.png')}
+                    source={require('../../../../../../assets/CardScreenJ/speaker.png')}
                     style={CardscreenJstyles.localImage}
                 />
                 <View style= {{justifyContent: "flex-start", alignItems: "flex-start"}}>
@@ -17,7 +17,7 @@ const CardscreenJ = () => {
                 <Text style={CardscreenJstyles.divoom}>Divoom Radio</Text>
                 <View style={CardscreenJstyles.row}>
                     <Image
-                        source={require('../../../../../../assets/dollar.png')}
+                        source={require('../../../../../../assets/CardScreenJ/dollar.png')}
                         style={CardscreenJstyles.dollar}
                     />
                     <Text style={CardscreenJstyles.text}>$52.00</Text>

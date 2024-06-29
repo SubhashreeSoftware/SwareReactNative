@@ -1,47 +1,46 @@
 import { StyleSheet } from 'react-native';
+import { FontSize, Margin, Padding } from '../../../../../../GlobalStyles';
 
 const FlatListAstyles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        // backgroundColor: Color.white,
-      },
-      item: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        paddingVertical: 10,
-        borderBottomWidth: 1,
-        borderBottomColor: '#ddd',
-      },
-      icon: {
-        width: 40,
-        height: 40,
-        marginRight: 16,
-      },
-      textContainer: {
-        flex: 1,
-      },
-      title: {
-        fontSize: 16,
-        fontWeight: 'bold',
-      },
-      description: {
-        fontSize: 14,
-        color: '#666',
-      },
-      rightContainer: {
-        alignItems: 'flex-end',
-      },
-      amount: {
-        fontSize: 16,
-        fontWeight: 'bold',
-      },
-      date: {
-        fontSize: 14,
-        color: '#666',
-      },
+  container: {
+    flex: 1,
+    width: '90%',
+    marginVertical: '50%',
+  },
+  item: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: Padding.p_xl,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ddd',
+  },
+  icon: {
+    width: 40,
+    height: 40,
+    marginRight: Margin.m_base,
+  },
+  textContainer: {
+    flex: 1,
+  },
+  title: {
+    fontSize: FontSize.size_base,
+    fontWeight: 'bold',
+  },
+  description: {
+    fontSize: FontSize.size_sm,
+    color: '#666',
+  },
+  rightContainer: {
+    alignItems: 'flex-end',
+  },
+  amount: {
+    fontSize: FontSize.size_base,
+    fontWeight: 'bold',
+  },
+  date: {
+    fontSize: FontSize.size_sm,
+    color: '#666',
+  },
 });
-
 
 export default FlatListAstyles;

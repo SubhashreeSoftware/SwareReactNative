@@ -66,12 +66,15 @@ const FileUploadA = () => {
 
   return (
     <View style={FileUploadAstyles.container}>
-      <Button title="Select File" onPress={selectFile} />
+      <View style={FileUploadAstyles.buttonContainer}>
+        <Button title="Select File" onPress={selectFile} />
+      </View>
       {fileUri && <Image source={{ uri: fileUri }} style={FileUploadAstyles.image} />}
-      <Button title="Upload File" onPress={uploadFile} />
+      <View style={FileUploadAstyles.buttonContainer}>
+        <Button title="Upload File" onPress={uploadFile} />
+      </View>
     </View>
   );
 };
-
 
 export default FileUploadA;
