@@ -49,25 +49,23 @@ const ModalAstyles = StyleSheet.create({
   },
   buttonContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     width: '100%',
     marginTop: Margin.m_xl,
   },
   button: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: Padding.p_sm,
-    paddingHorizontal: 50,
     borderRadius: 28,
-    backgroundColor: Color.primaryBlue,
-    marginHorizontal: Margin.m_8xs,
+    width: 100,
+    height: 40,
+    // backgroundColor: Color.primaryBlue,
+    // marginHorizontal: 5,
   },
   buttonText: {
     color: '#fff',
     fontSize: FontSize.size_base,
   },
   maybeLaterButton: {
-    backgroundColor: '#D6E6FF',
+    // backgroundColor: '#D6E6FF',
   },
   maybeLaterButtonText: {
     color: Color.primaryBlue,

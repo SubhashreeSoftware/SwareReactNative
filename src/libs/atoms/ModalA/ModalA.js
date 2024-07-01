@@ -3,6 +3,7 @@ import { View, Modal, Text, Alert, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import TextAreaA from '../TextAreaA/TextAreaA';
 import ModalAstyles from './ModalA.styles';
+import SimpleButton from '../ButtonA/ButtonA';
 
 const StarRating = ({ rating, onRatingPress }) => {
   return (
@@ -42,15 +43,21 @@ const ModalA = ({ modalVisible, handleCloseModal }) => {
             <Text style={ModalAstyles.text}>Write your review here..</Text>
             <TextAreaA />
             <View style={ModalAstyles.buttonContainer}>
-              <TouchableOpacity style={[ModalAstyles.button, ModalAstyles.maybeLaterButton]} onPress={handleCloseModal}>
-                <Text style={[ModalAstyles.buttonText, ModalAstyles.maybeLaterButtonText]}>Maybe Later</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={ModalAstyles.button} onPress={() => {
-                Alert.alert('Review submitted', `Rating: ${rating}`);
-                handleCloseModal();
-              }}>
-                <Text style={ModalAstyles.buttonText}>Submit</Text>
-              </TouchableOpacity>
+            <SimpleButton
+                title="Maybe Later"
+                onPress={handleCloseModal}
+                style={[ModalAstyles.button, ModalAstyles.maybeLaterButton]}
+                textStyle={[ModalAstyles.buttonText, ModalAstyles.maybeLaterButtonText]}
+              />
+              <SimpleButton
+                title="Submit"
+                onPress={() => {
+                  Alert.alert('Review submitted', `Rating: ${rating}`);
+                  handleCloseModal();
+                }}
+                style={ModalAstyles.button}
+                textStyle={ModalAstyles.buttonText}
+              />
             </View>
           </View>
         </View>

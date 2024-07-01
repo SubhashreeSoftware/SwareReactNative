@@ -7,9 +7,11 @@ const EReceiptScreenStyles = StyleSheet.create({
     backgroundColor: Color.white, 
   },
   button: {
-    alignItems: 'center', 
+    // justifyContent: 'center',
+    // alignItems: 'center', 
     borderRadius: Border.br_3xs,
-    backgroundColor: Color.primaryBlue,
+    // width: '100%',
+    // backgroundColor: Color.primaryBlue,
   },
   buttonText: {
     color: Color.white,
