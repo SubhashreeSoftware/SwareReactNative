@@ -25,11 +25,11 @@ const FormScreenJ = () => {
                  Boxname="Contact"
                 iconName = "call"
                 inputText = "CONTACT NO" />
-                
+               
                 {/* <PasswordInputJ/>
                 <DropdownJ />
-                <CheckboxJ/> */}
-                {/* <ButtonJ/> */}
+                <CheckboxJ/>
+                <ButtonJ/> */}
                 </View>
         </View>
     );

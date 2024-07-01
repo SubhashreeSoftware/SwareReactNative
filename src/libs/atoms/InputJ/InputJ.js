@@ -24,8 +24,9 @@ const InputJ = ({ inputText, iconName, Boxname }) => {
           <TextInput
             style={CssJ.input}
             placeholder={inputText}
-            placeholderTextColor="silver"
+            placeholderTextColor="#ffd11a"
             keyboardType="name"
+            selectionColor="#ffd11a"
           />
         </View>
 
