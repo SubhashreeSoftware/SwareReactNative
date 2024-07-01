@@ -1,25 +1,36 @@
-import { View, TextInput, StyleSheet, } from 'react-native';
+import { View, TextInput, StyleSheet, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import InputJstyles from './InputJ.styles';
 import CssJ from '../CommonCss/CssJ';
+import { LinearGradient } from 'expo-linear-gradient';
 
-const InputJ = ({inputText, iconName}) => {
-  
+
+
+const InputJ = ({ inputText, iconName, Boxname }) => {
+
   return (
-    <View>
-      <View style={InputJstyles.box}>
+   
+      <View style={{paddingVertical:5}}>
+        <Text style={InputJstyles.Boxname}>{Boxname}</Text>
         <View style={CssJ.inputContainer}>
-        <Icon name={iconName} size={20} color="#e5e4e2" style={CssJ.icon} />
+
+            <LinearGradient
+              colors={['#ffd11a','#cc2900']}
+              style={InputJstyles.iconBackground}
+            >
+              <Icon color="#fff" name={iconName} size={15} />
+              </LinearGradient>
+         
           <TextInput
             style={CssJ.input}
             placeholder={inputText}
-            placeholderTextColor="#e5e4e2" 
+            placeholderTextColor="silver"
             keyboardType="name"
           />
         </View>
-        
-        </View>
-    </View>
+
+      </View>
+   
   );
 };
 

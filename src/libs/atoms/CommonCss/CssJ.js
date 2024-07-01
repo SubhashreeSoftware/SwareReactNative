@@ -11,25 +11,19 @@ const CssJ = StyleSheet.create({
   input: {
     height: 40,
     borderColor: 'gray',
-    paddingHorizontal: 10,
-    paddingLeft: 28,
-
+    paddingHorizontal: 20,
   },
 
-  icon: {
-    marginRight: 10,
-  },
   inputContainer: {
         flexDirection: 'row',
         borderWidth: 1,
         borderColor: '#ccc',
-        borderRadius: 15,
-        marginBottom: 20,
-        paddingHorizontal: 10,
+        borderRadius: 25,
+        paddingHorizontal: 5,
         borderColor: '#e5e4e2',
         alignItems: 'center',
-        height: 50,
-        width: 280,
+        height: 45,
+        width:"100%"
     },
 });
 

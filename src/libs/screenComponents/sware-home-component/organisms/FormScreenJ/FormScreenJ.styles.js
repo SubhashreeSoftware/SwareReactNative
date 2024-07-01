@@ -3,10 +3,10 @@ import { Border, Color, FontSize, Margin, Padding } from "../../../../../../Glob
 
 const FormScreenJstyles = StyleSheet.create({
     boxInput:{
-        width: 320,
-        height: 650,
-        justifyContent: 'center',
-        alignItems: 'center',
+        padding:20,
+        width:"90%",
+        // justifyContent: 'center',
+        // alignItems: 'center',
         borderRadius: Border.br_xl,
         elevation: 5,  
         paddingHorizontal: Padding.p_xl,

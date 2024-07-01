@@ -14,18 +14,22 @@ const FormScreenJ = () => {
         <View style={CssJ.container}>
                 <View style={FormScreenJstyles.boxInput}>
                 <InputJ
+                Boxname="User Name "
                 iconName = "fax"
                 inputText = "CARD NUMBER" />
                 <InputJ
+                 Boxname="Card Holder Name"
                 iconName = "person"
                 inputText = "CARDHOLDER'S NAME" />
                 <InputJ
+                 Boxname="Contact"
                 iconName = "call"
                 inputText = "CONTACT NO" />
-                <PasswordInputJ/>
+                
+                {/* <PasswordInputJ/>
                 <DropdownJ />
-                <CheckboxJ/>
-                <ButtonJ/>
+                <CheckboxJ/> */}
+                {/* <ButtonJ/> */}
                 </View>
         </View>
     );

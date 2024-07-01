@@ -2,13 +2,18 @@ import { StyleSheet } from 'react-native';
 import { Color, Padding } from "../../../../GlobalStyles";
 
 const InputJstyles = StyleSheet.create({
-    container: {
-        flex: 1,
+    
+      iconBackground: {
+        padding: 10,
+        borderRadius: 50, // Make the background circular
         justifyContent: 'center',
-        padding: 20,
+        alignItems: 'center',
       },
       
-      
+      Boxname:{
+       color: "#cc2900",
+       paddingBottom: 5,
+      },
       
 });
 
