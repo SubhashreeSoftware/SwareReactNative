@@ -15,16 +15,16 @@ const InputJ = ({ inputText, iconName, Boxname }) => {
         <View style={CssJ.inputContainer}>
 
             <LinearGradient
-              colors={['#ffd11a','#cc2900']}
+              colors={['#FFFFFF' , '#FFF2C1']}
               style={InputJstyles.iconBackground}
             >
-              <Icon color="#fff" name={iconName} size={15} />
+              <Icon color="#E8A905" name={iconName} size={15} />
               </LinearGradient>
          
           <TextInput
             style={CssJ.input}
             placeholder={inputText}
-            placeholderTextColor="#ffd11a"
+            placeholderTextColor="#888"
             keyboardType="name"
             selectionColor="#ffd11a"
           />

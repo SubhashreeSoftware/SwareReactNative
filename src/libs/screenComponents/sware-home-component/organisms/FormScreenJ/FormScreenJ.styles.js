@@ -9,7 +9,7 @@ const FormScreenJstyles = StyleSheet.create({
         // alignItems: 'center',
         borderRadius: Border.br_xl,
         elevation: 5,  
-        paddingHorizontal: Padding.p_xl,
+        // paddingHorizontal: Padding.p_xl,
         marginTop: Margin.m_3xs,
         backgroundColor: Color.white,
 

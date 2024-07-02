@@ -11,8 +11,9 @@ const InputJstyles = StyleSheet.create({
       },
       
       Boxname:{
-       color: "#cc2900",
+       color: "#E8A905",
        paddingBottom: 5,
+       fontWeight: "500",
       },
       
 });

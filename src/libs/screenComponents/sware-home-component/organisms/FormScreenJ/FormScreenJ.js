@@ -8,6 +8,7 @@ import PasswordInputJ from '../../../../atoms/PasswordInputJ/PasswordInputJ';
 import { Border, Color } from "../../../../../../GlobalStyles"
 import CssJ from '../../../../atoms/CommonCss/CssJ';
 import FormScreenJstyles from './FormScreenJ.styles';
+import SimpleButton from '../../../../atoms/ButtonA/ButtonA';
 
 const FormScreenJ = () => {
     return (
@@ -16,16 +17,21 @@ const FormScreenJ = () => {
                 <InputJ
                 Boxname="User Name "
                 iconName = "fax"
-                inputText = "CARD NUMBER" />
+                inputText = "Card Number" />
                 <InputJ
                  Boxname="Card Holder Name"
                 iconName = "person"
-                inputText = "CARDHOLDER'S NAME" />
+                inputText = "Cardholder Name" />
                 <InputJ
                  Boxname="Contact"
                 iconName = "call"
-                inputText = "CONTACT NO" />
-               
+                inputText = "Contact No" />
+                <View style={{alignItems: "center"}}>
+                <SimpleButton
+                 title="Submit"
+                />
+                </View>
+                
                 {/* <PasswordInputJ/>
                 <DropdownJ />
                 <CheckboxJ/>
